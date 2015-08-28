@@ -17,7 +17,7 @@ let SearchFields = React.createClass({
 
     // Get values via this.refs
     var data = {
-      location : this.refs.location.getDOMNode().value
+      location : React.findDOMNode(this.refs.location).value
     }
 
     this.props.saveValues(data)

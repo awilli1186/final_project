@@ -7,39 +7,39 @@ import assign from 'object-assign';
 
 let fieldValues = {
   location   : null,
-  title      : null,
-  story      : null,
-  name       : null,
-  date       : null,
-  tag        : null
+  title      : '',
+  story      : '',
+  name       : '',
+  date       : '',
+  tag        : ''
 }
 
 let StoryForm = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return {
       step : 1
     }
   },
 
-  saveValues: function(field_value) {
+  saveValues(field_value) {
     return function() {
       fieldValues = assign({}, fieldValues, field_value)
     }.bind(this)()
   },
 
-  nextStep: function() {
+  nextStep() {
     this.setState({
       step : this.state.step + 1
     })
   },
 
-  previousStep: function() {
+  previousStep() {
     this.setState({
       step : this.state.step - 1
     })
   },
 
-  submitStory: function() {
+  submitStory() {
     // Handle via ajax submitting the user data, upon
     // success return this.nextStop(). If it fails,
     // show the user the error but don't advance
@@ -47,7 +47,7 @@ let StoryForm = React.createClass({
     this.nextStep()
   },
 
-  showStep: function() {
+  showStep() {
     switch (this.state.step) {
       case 1:
         return <SearchFields  fieldValues={fieldValues}
@@ -69,8 +69,8 @@ let StoryForm = React.createClass({
     }
   },
 
-  render: function() {
-    var style = {
+  render() {
+    let style = {
       width : (this.state.step / 4 * 100) + '%'
     }
 

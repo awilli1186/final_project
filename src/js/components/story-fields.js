@@ -8,7 +8,7 @@ let StoryFields = React.createClass({
         <ul className="form-fields">
           <li>
             <label>Title</label>
-            <input type="text" ref="name" defaultValue={this.props.fieldValues.title} />
+            <input type="text" ref="title" defaultValue={this.props.fieldValues.title} />
           </li>
           <li>
             <label>Story</label>
@@ -26,22 +26,23 @@ let StoryFields = React.createClass({
             <label>Tags</label>
             <input type="text" ref="tags" defaultValue={this.props.fieldValues.tag} />
           </li>
-            <button className="btn -primary pull-right" onClick={this.nextStep}>Save &amp; Continue</button>
+            <button className="btn -default pull-left" onClick={this.props.previousStep}>Back</button>
+            <button className="btn -primary pull-right" onClick={this.saveAndContinue}>Save &amp; Continue</button>
         </ul>
       </div>
     )
   },
 
-  nextStep: function(e) {
+  saveAndContinue: function(e) {
     e.preventDefault()
 
     // Get values via this.refs
-    var data = {
-      title : this.refs.title.findDOMNode().value,
-      story : this.refs.story.getDOMNode().value,
-      name : this.refs.name.getDOMNode().value,
-      date : this.refs.date.getDOMNode().value,
-      tag : this.refs.tag.getDOMNode().value
+    let data = {
+      title : React.findDOMNode(this.refs.title).value,
+      story : React.findDOMNode(this.refs.story).value,
+      name : React.findDOMNode(this.refs.name).value,
+      date : React.findDOMNode(this.refs.date).value,
+      tag : React.findDOMNode(this.refs.tags).value
     }
 
     this.props.saveValues(data)

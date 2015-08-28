@@ -31,10 +31,11 @@ let Trigger = React.createClass({
           <Modal.Header closeButton>
             <Modal.Title>Add Story</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
 
-          <StoryForm/>
+          <Modal.Body>
+              <StoryForm/>
           </Modal.Body>
+
           <Modal.Footer>
 
           </Modal.Footer>

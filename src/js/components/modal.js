@@ -1,49 +1,27 @@
 import React from 'react';
-import {Modal} from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import StoryForm from './story_form';
+import Modal from 'boron/DropModal';
 
-let Trigger = React.createClass({
 
-  getInitialState(){
-    return { showModal: false };
-  },
-
-  close(){
-    this.setState({ showModal: false });
-  },
-
-  open(){
-    this.setState({ showModal: true });
-  },
-
-  render() {
-
-    return (
-      <div>
-
-        <Button className='add'
-          onClick={this.open}>
-          Add Story
-        </Button>
-
-        <Modal show={this.state.showModal} onHide={this.close}>
-          <Modal.Header closeButton>
-            <Modal.Title>Add Story</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body>
-              <StoryForm/>
-          </Modal.Body>
-
-          <Modal.Footer>
-
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-  }
+var Trigger = React.createClass({
+    showModal: function(){
+        this.refs.modal.show();
+    },
+    hideModal: function(){
+        this.refs.modal.hide();
+    },
+    render: function() {
+        return (
+            <div>
+                <button className='add' onClick={this.showModal}>Open</button>
+                <Modal className='modal' ref="modal">
+                  <button className='close' onClick={this.hideModal}>X</button>
+                  <h2>Add Story</h2>
+                    <StoryForm />
+                </Modal>
+            </div>
+        );
+    }
 });
-
 
 export default Trigger;

@@ -8,6 +8,8 @@ let Map = React.createClass({
         <Mapbox
           mapId="awilli1186.na0889jj"
           zoomControl={true}
+          minZoom={10}
+          maxZoom={14}
           center={[36.161589,-86.7739455]} zoom={14} maxZoom={20}
           onMapCreated={this._onMapCreated}/>
       </div>
@@ -15,7 +17,7 @@ let Map = React.createClass({
   },
   _onMapCreated: function(map, L) {
     // let marker = new L.Marker(new L.LatLng(36.1667, -86.7833));
-    map.addLayer(marker);
+    // map.addLayer(marker);
   }
 });
 

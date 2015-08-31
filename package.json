@@ -39,7 +39,9 @@
     "react": "^0.13.3",
     "react-bootstrap": "^0.25.0",
     "react-mapboxmap": "0.0.2",
+    "react-modal-component": "^1.0.9",
     "react-multistep": "^1.0.0",
+    "reactify": "^1.1.1",
     "simple-react-modal": "^0.4.1",
     "vinyl-source-stream": "^1.1.0"
   },

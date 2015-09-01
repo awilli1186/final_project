@@ -1,6 +1,6 @@
 import React from 'react';
 import SiteNav from './site-nav';
-import Map from './map'
+import Map from './map/map';
 
 class App extends React.Component {
 

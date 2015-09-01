@@ -1,8 +1,9 @@
 import React from 'react';
-import SearchFields from './search-fields';
-import StoryFields from './story-fields';
-import MediaFields from './media-fields';
-// import SubmitStory from './submit-story';
+import Parse from '../../parse';
+import SearchFields from '../story-wizard/search-fields';
+import StoryFields from '../story-wizard/story-fields';
+import MediaFields from '../story-wizard/media-fields';
+import Confirmation from '../story-wizard/confirmation';
 import assign from 'object-assign';
 
 let fieldValues = {
@@ -40,11 +41,18 @@ let StoryForm = React.createClass({
   },
 
   submitStory() {
-    // Handle via ajax submitting the user data, upon
-    // success return this.nextStop(). If it fails,
-    // show the user the error but don't advance
+    let Story = Parse.Object.extend("Story");
+    let story = new Story();
 
-    this.nextStep()
+    story.set('location', fieldValues.location.coordinates);
+    story.set('title', fieldValues.title);
+    story.set('story', fieldValues.story);
+    story.set('name', fieldValues.name);
+    story.set('date', fieldValues.date);
+
+    story.save(story).then(function(object) {
+      alert("yay! it worked");
+    });
   },
 
   showStep() {
@@ -52,7 +60,6 @@ let StoryForm = React.createClass({
       case 1:
         return <SearchFields  fieldValues={fieldValues}
                               nextStep={this.nextStep}
-                              previousStep={this.previousStep}
                               saveValues={this.saveValues} />
       case 2:
         return <StoryFields  fieldValues={fieldValues}
@@ -61,11 +68,15 @@ let StoryForm = React.createClass({
                              saveValues={this.saveValues} />
       case 3:
         return <MediaFields  fieldValues={fieldValues}
+                             nextStep={this.nextStep}
                              previousStep={this.previousStep}
                              saveValues={this.saveValues} />
+
       case 4:
-        return <SubmitStory fieldValues={fieldValues}
-                            SubmitStory={this.submitStory} />
+        return <Confirmation fieldValues={fieldValues}
+                             previousStep={this.previousStep}
+                             submitStory={this.submitStory} />
+
     }
   },
 

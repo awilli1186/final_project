@@ -20,15 +20,17 @@ let StoryFields = React.createClass({
           </li>
           <li>
             <label>Historic Date</label>
-            <input type="text" ref="date" defaultValue={this.props.fieldValues.date} />
+            <input type="text" ref="date" placeholder='example: 01-01-2015' defaultValue={this.props.fieldValues.date} />
           </li>
           <li>
             <label>Tags</label>
             <input type="text" ref="tags" defaultValue={this.props.fieldValues.tag} />
           </li>
-            <button className="btn -default pull-left" onClick={this.props.previousStep}>Back</button>
-            <button className="btn -primary pull-right" onClick={this.saveAndContinue}>Save &amp; Continue</button>
-        </ul>
+          <li className="form-footer">
+            <button className="btn btn-default pull-left" onClick={this.props.previousStep}>Back</button>
+            <button className="btn btn-primary pull-right" onClick={this.saveAndContinue}>Save &amp; Continue</button>
+          </li>
+      </ul>
       </div>
     )
   },

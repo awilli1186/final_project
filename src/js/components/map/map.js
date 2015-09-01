@@ -1,5 +1,5 @@
 import React from "react";
-import Mapbox from "./mapbox";
+import Mapbox from "../map/mapbox";
 
 let Map = React.createClass({
   render: function() {

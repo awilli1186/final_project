@@ -4,23 +4,24 @@ let MediaFields = React.createClass({
   render() {
     return (
       <div>
-        <h2>Add Media!</h2>
+        <h2>Add Media</h2>
         <ul className="form-fields">
           <li>
-            <label>Name</label>
-            <input type="text" ref="media" defaultValue={this.props.fieldValues.media} />
+            <label>Photo</label>
+                <input type="file" ref='media' accept="image/*" defaultValue={this.props.fieldValues.media} />
           </li>
           <li className="form-footer">
-             <button className="btn -default pull-left" onClick={this.props.previousStep}>Back</button>
-            <button className="btn -primary pull-right" onClick={this.submitStory}>Submit</button>
+             <button className="btn btn-default pull-left" onClick={this.props.previousStep}>Back</button>
+            <button className="btn btn-primary pull-right" onClick={this.saveAndContinue}>Save & Continue</button>
           </li>
         </ul>
       </div>
     )
   },
 
-  submitStory(e) {
+  saveAndContinue: function(e) {
     e.preventDefault()
+
 
     // Get values via this.refs
     let data = {
@@ -28,7 +29,7 @@ let MediaFields = React.createClass({
     }
 
     this.props.saveValues(data)
-    this.props.submitStory()
+    this.props.nextStep()
   }
 })
 

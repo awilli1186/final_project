@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: $helvetica;
 }
 
 body {
@@ -23,11 +23,6 @@ header {
   h1 {
     @include shift(.3);
     margin-top: .5em;
-  }
-  .add {
-    @include shift(11);
-    position: absolute;
-    top: 1em;
   }
 }
 
@@ -70,14 +65,17 @@ header {
   // Buttons
 
   .add {
-    @include shift(10.5);
+    @include shift(11);
+    position: absolute;
+    top:1.3em;
     border-radius: 5px;
     color: #fff;
+    text-shadow: .5px 1px black;
     font-size: 16px;
-    padding: 10px 12px;
+    padding: 10px 3px;
     text-align: center;
-    background-color: $blue;
-    border: 1px solid $blue;
+    background-color: #F2E394;
+    border: 1px solid #58595B;
   }
 
   .close {
@@ -96,18 +94,24 @@ header {
     padding: 10px 12px;
     text-align: center;
 
-    &.-default {
+    &.btn-default {
       background-color: #fff;
       border: 1px solid #ddd;
       color: $grey;
     }
 
-    &.-primary {
+    &.btn-primary {
       background-color: $blue;
       border: 1px solid $blue;
       margin-top: 1.5em;
       }
     }
+
+    &:disabled {
+      background-color: #8C4546 !important;
+    }
+
+
 
   // Progress
   .progress1 {
@@ -201,4 +205,11 @@ header {
 
 .modal {
   padding: 10px;
+}
+
+.loc-output {
+  margin: 10px;
+  font-size: 18px;
+  color: #F2AE72;
+  text-shadow: .5px 1px black;
 }

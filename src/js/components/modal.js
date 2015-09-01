@@ -1,5 +1,5 @@
 import React from 'react';
-import StoryForm from './story_form';
+import StoryForm from './story-wizard/story_form';
 import Modal from 'boron/DropModal';
 
 
@@ -13,7 +13,7 @@ var Trigger = React.createClass({
     render: function() {
         return (
             <div>
-                <button className='add' onClick={this.showModal}>Open</button>
+                <button className='add' onClick={this.showModal}>Add Story</button>
                 <Modal className='modal' ref="modal">
                   <button className='close' onClick={this.hideModal}>X</button>
                   <h2>Add Story</h2>

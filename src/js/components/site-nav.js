@@ -1,7 +1,5 @@
 import React from 'react';
 import Trigger from './modal';
-import Menu from './slide-right';
-import MenuItem from './menu-items';
 
 class SiteNav extends React.Component {
   getInitialState(){
@@ -28,10 +26,3 @@ class SiteNav extends React.Component {
 }
 
 export default SiteNav;
-//
-// <button onClick={this.showRight}>Show Right Menu!</button>
-//   <Menu ref="right" alignment="right">
-//     <MenuItem hash="first-page">First Page</MenuItem>
-//     <MenuItem hash="second-page">Second Page</MenuItem>
-//     <MenuItem hash="third-page">Third Page</MenuItem>
-//   </Menu>

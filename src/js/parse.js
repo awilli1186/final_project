@@ -1,6 +1,6 @@
 let {Parse} = require('parse');
 
-Parse.initialize("zxZ5SdCko0FezEh2HXOG8xqNEQk4WyxIidsIKxDP", "ThQKUjEReFcNNtsTqdu0g5fCeBecf8PJ9KCB1hxf");
+Parse.initialize("N8xJQ3gDj0uZL4Bhlz0v21cCoWOvOGCenntyKvwJ", "GlP3mxg3Jo5AapnX9PqOpziiNpaInjv7fE7seVxU");
 
 
 export default Parse;

@@ -41,10 +41,11 @@ let StoryForm = React.createClass({
   },
 
   submitStory() {
+    var point = new Parse.GeoPoint(fieldValues.location.coordinates);
     let Story = Parse.Object.extend("Story");
     let story = new Story();
 
-    story.set('location', fieldValues.location.coordinates);
+    story.set('location', point);
     story.set('title', fieldValues.title);
     story.set('story', fieldValues.story);
     story.set('name', fieldValues.name);

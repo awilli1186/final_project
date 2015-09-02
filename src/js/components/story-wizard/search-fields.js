@@ -21,8 +21,8 @@ let SearchFields = React.createClass({
     $.ajax(url).done((response) => {
       if (response.features) {
         let coordinates = {
-          latitude: Number(response.features[0].geometry.coordinates[0]),
-          longitude: Number(response.features[0].geometry.coordinates[1])
+          latitude: Number(response.features[0].geometry.coordinates[1]),
+          longitude: Number(response.features[0].geometry.coordinates[0])
         }
         let location = {
           coordinates: coordinates,

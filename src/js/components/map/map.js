@@ -8,40 +8,61 @@ let Map = React.createClass({
     return (
       <div className="container">
         <Mapbox
-          mapId="awilli1186.na0889jj"
+          mapId="mapbox.streets"
           zoomControl={true}
           scrollWheelZoom={false}
-          minZoom={10}
-          maxZoom={14}
-          center={[36.161589,-86.7739455]} zoom={14} maxZoom={20}
+          center={[36.161589,-86.7739455]} zoom={11} maxZoom={20} minZoom={10}
           onMapCreated={this._onMapCreated}/>
       </div>
     );
   },
   _onMapCreated: function(map, L) {
-    // let marker = new L.Marker(new L.LatLng(36.1667, -86.7833));
-    // map.addLayer(marker);
     let Story = Parse.Object.extend("Story");
     let query = new Parse.Query(Story);
-    query.equalTo("arrayKey", 2);
-  query.find({
-    success: function(results) {
-      console.log("Successfully retrieved " + results.length + " locations.");
-      // Do something with the returned Parse.Object values
-      for (var i = 0; i < results.length; i++) {
-        var object = results[i];
-        console.log(object.id + ' - ' + object.get('location'));
-        console.log('location');
-      }
-    },
-    error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
-    }
-  });
-     }
+
+    query.select("location", 'title', 'story', 'name', 'date');
+    query.find().then(results => {
+      let markers = new L.MarkerClusterGroup();
+
+      results.forEach(data => {
+        let story = data.attributes;
+        let {latitude, longitude} = story.location;
+        let title = story.title;
+        let disc = story.story;
+        let name = story.name;
+        let date = story.date;
+        let address = story.address;
+        // let media = story.media
+
+        let marker = L.marker(new L.LatLng(latitude, longitude), {
+          icon: L.mapbox.marker.icon({'marker-symbol': 'star', 'marker-color': 'F2AE72'}),
+          title: title,
+          disc: disc,
+          name: name,
+          date: date,
+          address: address,
+          // media: media
+        });
+
+        var popupContent =  title + disc + name + date;
+
+
+        marker.bindPopup(popupContent, {
+          className: 'popup',
+          minWidth: 350,
+          minHeight: 300
+        });
+        markers.addLayer(marker);
+
+      });
+
+      map.addLayer(markers);
+
+      return results;
+    }).fail(error => {
+      alert("Error: " + error.code + " " + error.message)
+    });
+  }
 });
 
 export default Map;
-
-
-//

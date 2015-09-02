@@ -46,10 +46,12 @@ let StoryForm = React.createClass({
     let story = new Story();
 
     story.set('location', point);
+    story.set('address', fieldValues.location.placeName);
     story.set('title', fieldValues.title);
     story.set('story', fieldValues.story);
     story.set('name', fieldValues.name);
     story.set('date', fieldValues.date);
+    // story.set('media', fieldValues.media);
 
     story.save(story).then(function(object) {
       alert("yay! it worked");

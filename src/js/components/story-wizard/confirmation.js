@@ -12,6 +12,7 @@ let Confirmation = React.createClass({
           <li><b>Name:</b> {this.props.fieldValues.name}</li>
           <li><b>Date:</b> {this.props.fieldValues.date}</li>
           <li><b>tag:</b> {this.props.fieldValues.tag}</li>
+          <li><b>Media:</b> {this.props.fieldValues.media}</li>
         </ul>
         <ul className="form-fields">
           <li className="form-footer">

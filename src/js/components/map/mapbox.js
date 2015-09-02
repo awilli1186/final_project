@@ -4,8 +4,8 @@ let Mapbox = React.createClass({
   componentDidMount: function(argument) {
     let props = this.props;
 
-    let mapId = props.mapId || props.src || "mapbox.streets" || "mapbox.places";
-    L.mapbox.accessToken = 'pk.eyJ1IjoiYXdpbGxpMTE4NiIsImEiOiIyMWZlNmI0MGM4Nzg4MWI5ODZhOTc2ZDViNWZjMzU4YyJ9.dbgZ4ZW4JI46u5p6hEkcrg';
+    let mapId = props.mapId || props.src || "mapbox.streets";
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYXdpbGxpMTE4NiIsImEiOiI4ZGY4NzEzYTU2MzRkNjYwYjdiNjRjN2VlZDUxMmY0NyJ9.73_1b86ApXGliR_iQSvZCw';
     let options = {};
     let ownProps = ['mapId', 'onMapCreated'];
     for (var k in props) {

@@ -21,28 +21,27 @@ let Map = React.createClass({
   _onMapCreated: function(map, L) {
     // let marker = new L.Marker(new L.LatLng(36.1667, -86.7833));
     // map.addLayer(marker);
-    // function load() {
-    //   // Fetch just the contents of a .geojson file from GitHub by passing
-    //   // `application/vnd.github.v3.raw` to the Accept header
-    //   // As with any other AJAX request, this technique is subject to the Same Origin Policy:
-    //   // http://en.wikipedia.org/wiki/Same_origin_policy the server delivering the request should support CORS.
-    //   $.ajax({
-    //     headers: {
-    //       'X-Parse-Application-Id' : 'N8xJQ3gDj0uZL4Bhlz0v21cCoWOvOGCenntyKvwJ',
-    //       'X-Parse-REST-API-Key' : '8snh5OsCbMReuDzEu4AceBKyvS8zxiMJFPPlC75P'
-    //     },
-    //     xhrFields: {
-    //       withCredentials: false
-    //     },
-    //     dataType: 'jsonp',
-    //     url: "https://api.parse.com/1/Story",
-    //     success: function(geojson) {
-    //         // On success add fetched data to the map.
-    //         L.mapbox.featureLayer(geojson).addTo(map);
-    //     }
-    //   });
-    // }
+    let Story = Parse.Object.extend("Story");
+    let query = new Parse.Query(Story);
+    query.equalTo("arrayKey", 2);
+  query.find({
+    success: function(results) {
+      console.log("Successfully retrieved " + results.length + " locations.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) {
+        var object = results[i];
+        console.log(object.id + ' - ' + object.get('location'));
+        console.log('location');
+      }
+    },
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
      }
 });
 
 export default Map;
+
+
+//

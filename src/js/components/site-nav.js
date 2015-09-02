@@ -1,14 +1,14 @@
 import React from 'react';
 import Trigger from './modal';
 
-class SiteNav extends React.Component {
+let SiteNav  = React.createClass ({
   getInitialState(){
      return { show: false };
-   }
+   },
 
    showRight() {
 		this.refs.right.show();
-	}
+	},
 
 
   render() {
@@ -23,6 +23,6 @@ class SiteNav extends React.Component {
       </header>
     )
   }
-}
+})
 
 export default SiteNav;

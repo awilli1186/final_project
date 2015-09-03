@@ -12,6 +12,7 @@ let fieldValues = {
   story      : '',
   name       : '',
   date       : '',
+  media      : null,
   tag        : ''
 }
 
@@ -41,7 +42,8 @@ let StoryForm = React.createClass({
   },
 
   submitStory() {
-    var point = new Parse.GeoPoint(fieldValues.location.coordinates);
+
+    let point = new Parse.GeoPoint(fieldValues.location.coordinates);
     let Story = Parse.Object.extend("Story");
     let story = new Story();
 
@@ -51,11 +53,12 @@ let StoryForm = React.createClass({
     story.set('story', fieldValues.story);
     story.set('name', fieldValues.name);
     story.set('date', fieldValues.date);
-    // story.set('media', fieldValues.media);
+    story.set('media', fieldValue.media);
 
     story.save(story).then(function(object) {
       alert("yay! it worked");
     });
+
   },
 
   showStep() {

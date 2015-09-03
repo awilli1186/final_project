@@ -18,11 +18,12 @@ header {
   height: 80px;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #449074;
   background: #449074;
   h1 {
     @include shift(.3);
     margin-top: .5em;
+    z-index: 1;
   }
 }
 
@@ -65,17 +66,17 @@ header {
   // Buttons
 
   .add {
-    @include shift(11);
+    @include shift(10.75);
     position: absolute;
     top:1.3em;
-    border-radius: 5px;
-    color: #fff;
-    text-shadow: .5px 1px black;
-    font-size: 16px;
-    padding: 10px 3px;
-    text-align: center;
-    background-color: #F2E394;
-    border: 1px solid #58595B;
+  	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+  	border-bottom-color:#333;
+  	border:1px solid #F2E394;
+  	background-color:#F2E394;
+  	border-radius:5px;
+  	color: white;
+  	font-size:18px;
+  	padding:5px
   }
 
   .close {
@@ -216,4 +217,13 @@ header {
 
 .leaflet-popup-content {
   text-align: center;
+  background:#2c3e50;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
+  border-radius: 10px;
+}
+.leaflet-popup-content-wrapper {
+  background: #2c3e50;
+  border-radius: 10px;
 }

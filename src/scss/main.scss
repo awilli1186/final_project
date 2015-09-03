@@ -13,7 +13,7 @@ body {
   background: #ffffff;
 }
 
-header {
+.top {
   @include span-columns(12);
   height: 80px;
   margin: 0;

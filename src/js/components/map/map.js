@@ -6,6 +6,7 @@ import $ from 'jquery';
 let Map = React.createClass({
   render: function() {
     return (
+      <main>
       <div className="container">
         <Mapbox
           mapId="mapbox.streets"
@@ -14,6 +15,7 @@ let Map = React.createClass({
           center={[36.161589,-86.7739455]} zoom={12} maxZoom={20}
           onMapCreated={this._onMapCreated}/>
       </div>
+      </main>
     );
   },
   _onMapCreated(map, L) {
@@ -28,16 +30,15 @@ let Map = React.createClass({
 
       results.forEach(data => {
         let story = data.attributes;
-        let image = data.attributes.get("media").url;
         let {latitude, longitude} = story.location;
         let title = story.title;
         let disc = story.story;
         let name = story.name;
         let date = story.date;
         let address = story.address;
-        let media = image;
+        let media = media;
 
-        console.log(image);
+        console.log(media);
 
         let marker = L.marker(new L.LatLng(latitude, longitude), {
           icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-size': 'large', 'marker-color': 'F2AE72'}),
@@ -64,5 +65,9 @@ let Map = React.createClass({
     });
   }
 });
+
+Map.contextTypes = {
+  router: React.PropTypes.func
+};
 
 export default Map;

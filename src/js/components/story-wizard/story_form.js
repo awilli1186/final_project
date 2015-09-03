@@ -1,5 +1,6 @@
 import React from 'react';
 import Parse from '../../parse';
+import $ from 'jquery';
 import SearchFields from '../story-wizard/search-fields';
 import StoryFields from '../story-wizard/story-fields';
 import MediaFields from '../story-wizard/media-fields';
@@ -53,12 +54,12 @@ let StoryForm = React.createClass({
     story.set('story', fieldValues.story);
     story.set('name', fieldValues.name);
     story.set('date', fieldValues.date);
-    story.set('media', fieldValue.media);
+    story.set('media', fieldValues.media);
 
     story.save(story).then(function(object) {
       alert("yay! it worked");
     });
-
+  // })
   },
 
   showStep() {

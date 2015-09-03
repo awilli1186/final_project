@@ -11,12 +11,12 @@ let Map = React.createClass({
           mapId="mapbox.streets"
           zoomControl={true}
           scrollWheelZoom={false}
-          center={[36.161589,-86.7739455]} zoom={12} maxZoom={20} minZoom={10}
+          center={[36.161589,-86.7739455]} zoom={12} maxZoom={20}
           onMapCreated={this._onMapCreated}/>
       </div>
     );
   },
-  _onMapCreated: function(map, L) {
+  _onMapCreated(map, L) {
 
     let Story = Parse.Object.extend("Story");
     let query = new Parse.Query(Story);
@@ -28,19 +28,22 @@ let Map = React.createClass({
 
       results.forEach(data => {
         let story = data.attributes;
+        let image = data.attributes.get("media").url;
         let {latitude, longitude} = story.location;
         let title = story.title;
         let disc = story.story;
         let name = story.name;
         let date = story.date;
         let address = story.address;
-        let media = story.media;
+        let media = image;
+
+        console.log(image);
 
         let marker = L.marker(new L.LatLng(latitude, longitude), {
-          icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-color': 'F2AE72'}),
+          icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-size': 'large', 'marker-color': 'F2AE72'}),
         });
 
-        var popupContent =  title + '<br/>' + '<img src="' + media + '" />' + '<br/>' + disc + '<br/>' + address + '<br/>' + date + '<br/>' + 'Submitted by: ' + name;
+        var popupContent =  title + '<br/>' + '<img id="img" src="' + media + '" />' + '<br/>' + disc + '<br/>' + address + '<br/>' + date + '<br/>' + 'Submitted by: ' + name;
 
 
         marker.bindPopup(popupContent, {

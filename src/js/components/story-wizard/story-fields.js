@@ -20,7 +20,7 @@ let StoryFields = React.createClass({
           </li>
           <li>
             <label>Historic Date</label>
-            <input type="date" ref="date" defaultValue={this.props.fieldValues.date} />
+            <input type="text" ref="date" placeholder='mm-dd-yyyy' defaultValue={this.props.fieldValues.date} />
           </li>
           <li>
             <label>Tags</label>

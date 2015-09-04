@@ -9,10 +9,10 @@ let Map = React.createClass({
       <main>
       <div className="container">
         <Mapbox
-          mapId="mapbox.streets"
+          mapId="awilli1186.nb9jof0g"
           zoomControl={true}
           scrollWheelZoom={false}
-          center={[36.161589,-86.7739455]} zoom={12} maxZoom={20}
+          center={[36.161589,-86.7739455]} zoom={12}
           onMapCreated={this._onMapCreated}/>
       </div>
       </main>

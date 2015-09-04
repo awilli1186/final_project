@@ -5,7 +5,9 @@ import SearchFields from '../story-wizard/search-fields';
 import StoryFields from '../story-wizard/story-fields';
 import MediaFields from '../story-wizard/media-fields';
 import Confirmation from '../story-wizard/confirmation';
+import Success from '../story-wizard/success';
 import assign from 'object-assign';
+
 
 let fieldValues = {
   location   : null,
@@ -57,9 +59,8 @@ let StoryForm = React.createClass({
     story.set('media', fieldValues.media);
 
     story.save(story).then(function(object) {
-      alert("yay! it worked");
     });
-  // })
+    this.nextStep()
   },
 
   showStep() {
@@ -82,14 +83,18 @@ let StoryForm = React.createClass({
       case 4:
         return <Confirmation fieldValues={fieldValues}
                              previousStep={this.previousStep}
-                             submitStory={this.submitStory} />
+                             submitStory={this.submitStory}
+                             nextStep={this.nextStep} />
+
+      case 5:
+        return <Success />
 
     }
   },
 
   render() {
     let style = {
-      width : (this.state.step / 4 * 100) + '%'
+      width : (this.state.step / 5 * 100) + '%'
     }
 
     return (

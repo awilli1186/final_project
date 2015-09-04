@@ -1,31 +1,6 @@
 @import "dist/bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "dist/bower_components/neat/app/assets/stylesheets/_neat.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: $helvetica;
-}
-
-body {
-  background: #ffffff;
-}
-
-.top {
-  @include span-columns(12);
-  height: 80px;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #449074;
-  background: #449074;
-  h1 {
-    @include shift(.3);
-    margin-top: .5em;
-    z-index: 1;
-  }
-}
-
 
   // Base Layout Styles
   $green  : #3aad91;
@@ -35,39 +10,47 @@ body {
   $red    : #d33847;
   $grey   : #4c5e65;
 
-  // Helpers
-  @mixin clear-fix {
-    &:before,
-    &:after {
-      content: "";
-      display: table;
-    }
-    &:after {
-      clear: both;
-    }
-    .lte7 & {
-      zoom: 1;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $helvetica;
+}
+
+body {
+  width: 100%
+}
+
+.top {
+  width: inherit;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #449074;
+  background: #449074;
+  h1 {
+    font-family: cursive;
   }
-
-  // Base Layout Styles
-
+  nav {
+    width: inherit;
+  }
+}
 
   .container {
     margin: 0;
     width: 100%;
     height: 700px;
-    position: absolute;
-    top: 9em;
+    position: relative;
+    top: 4em;
     padding: 0;
   }
 
   // Buttons
 
   .add {
-    @include shift(10.75);
     position: absolute;
     top:1.3em;
+    right: 4em;
   	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
   	border-bottom-color:#333;
   	border:1px solid #F2E394;
@@ -117,8 +100,6 @@ body {
   .progress1 {
     margin-bottom: 20px;
     transition: all 0.2s ease;
-    background-color: blue;
-
   }
 
   .progress-step {
@@ -188,7 +169,6 @@ body {
   }
 
   textarea {
-
       font-size: 16px;
       padding: 8px;
       width: 100%;
@@ -198,10 +178,6 @@ body {
     font-size: 16px;
     padding: 8px;
   }
-
-.map {
-  height: 300px;
-}
 
 .modal {
   padding: 10px;

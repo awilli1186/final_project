@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Parse from '../../parse';
 import $ from 'jquery';
@@ -7,7 +8,6 @@ import MediaFields from '../story-wizard/media-fields';
 import Confirmation from '../story-wizard/confirmation';
 import Success from '../story-wizard/success';
 import assign from 'object-assign';
-
 
 let fieldValues = {
   location   : null,
@@ -60,7 +60,7 @@ let StoryForm = React.createClass({
 
     story.save(story).then(function(object) {
     });
-    this.nextStep()
+  this.nextStep()
   },
 
   showStep() {
@@ -83,13 +83,11 @@ let StoryForm = React.createClass({
       case 4:
         return <Confirmation fieldValues={fieldValues}
                              previousStep={this.previousStep}
-                             submitStory={this.submitStory}
-                             nextStep={this.nextStep} />
+                             submitStory={this.submitStory} />
 
       case 5:
         return <Success />
-
-    }
+  }
   },
 
   render() {

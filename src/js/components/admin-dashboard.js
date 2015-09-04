@@ -13,6 +13,7 @@ class AdminDashboard extends React.Component {
       <section className="dashboard">
         <h2>Dashboard</h2>
         <p>{message}</p>
+         <a href="/" >Home</a>
       </section>
     )
   }

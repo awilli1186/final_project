@@ -34,6 +34,7 @@ class Admin extends React.Component {
         <input ref="username" type="text" placeholder="Username"/>
         <input ref="password" type="password" placeholder="Password"/>
         <button ref="login" onClick={this.onSubmit.bind(this)}>Login</button>
+         <a href="/" >Home</a>
       </section>
     );
   }

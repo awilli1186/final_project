@@ -1,7 +1,6 @@
 @import "dist/bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "dist/bower_components/neat/app/assets/stylesheets/_neat.scss";
 
-
   // Base Layout Styles
   $green  : #3aad91;
   $blue   : #2989c6;
@@ -9,6 +8,22 @@
   $orange : #fb6733;
   $red    : #d33847;
   $grey   : #4c5e65;
+
+  // Helpers
+@mixin clear-fix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  .lte7 & {
+    zoom: 1;
+  }
+}
+
 
 * {
   margin: 0;
@@ -21,28 +36,48 @@ body {
   width: 100%
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
+}
 .top {
   width: inherit;
   height: 80px;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #449074;
-  background: #449074;
+  border-bottom: 1px solid #7ADAB8;
+  background: #7ADAB8;
   h1 {
     font-family: cursive;
+    text-align: center;
   }
-  nav {
-    width: inherit;
+    a {
+      border:1px solid #F9CB33;
+      background-color: #F9CB33;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+    	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+      padding: 6.5px 5px;
+      position: relative;
+      bottom: 1em;
+      left: 2em;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
-}
 
   .container {
     margin: 0;
     width: 100%;
-    height: 700px;
+    height: 800px;
     position: relative;
     top: 4em;
-    padding: 0;
   }
 
   // Buttons
@@ -50,15 +85,17 @@ body {
   .add {
     position: absolute;
     top:1.3em;
-    right: 4em;
+    right: 3em;
   	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-  	border-bottom-color:#333;
-  	border:1px solid #F2E394;
-  	background-color:#F2E394;
+  	border:1px solid #F9CB33;
+  	background-color:#F9CB33;
   	border-radius:5px;
   	color: white;
   	font-size:18px;
-  	padding:5px
+  	padding:6px 5px;
+    &:focus {outline:0;};
+    cursor: pointer;
+
   }
 
   .close {
@@ -88,10 +125,18 @@ body {
       border: 1px solid $blue;
       margin-top: 1.5em;
       }
+      &:hover {
+      background-color: #eee;
+      color: $blue;
+    }
     }
 
     &:disabled {
       background-color: #8C4546 !important;
+
+      &:hover {
+        color: white;
+      }
     }
 
 
@@ -201,4 +246,45 @@ body {
 .leaflet-popup-content-wrapper {
   background: #2c3e50;
   border-radius: 10px;
+}
+
+.popup {
+  img {
+    width: 100%;
+  }
+}
+
+.about {
+  @include span-columns(8);
+  @include shift(2);
+  h1 {
+    text-align: center;
+     color: #8C4546;
+     text-shadow: 1px 1px #eee;
+  }
+  p {
+    margin: 15px;
+  }
+  a {
+    @include shift(5.35);
+    position: relative;
+    top: 2em;
+  }
+}
+
+.home {
+  footer {
+    position: relative;
+  }
+}
+
+.footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;
+  a {
+      @include shift(5.5);
+  }
+
 }

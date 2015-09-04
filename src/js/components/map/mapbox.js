@@ -4,7 +4,7 @@ let Mapbox = React.createClass({
   componentDidMount: function(argument) {
     let props = this.props;
 
-    let mapId = props.mapId || props.src || "mapbox.streets";
+    let mapId = props.mapId || props.src || "mapbox.street";
     L.mapbox.accessToken = 'pk.eyJ1IjoiYXdpbGxpMTE4NiIsImEiOiI4ZGY4NzEzYTU2MzRkNjYwYjdiNjRjN2VlZDUxMmY0NyJ9.73_1b86ApXGliR_iQSvZCw';
     let options = {};
     let ownProps = ['mapId', 'onMapCreated'];

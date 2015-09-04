@@ -1,6 +1,6 @@
 import React from 'react';
-// import React, {PropTypes} from 'react';
 import Header from './header';
+import Footer from './footer';
 import Map from './map/map';
 import Router, { RouteHandler } from 'react-router';
 
@@ -8,12 +8,11 @@ let Home = React.createClass ({
 
   render() {
     return (
-      <div className="wrapper">
-        <Header name="Voices of Nasvhille"/>
-          <main>
+      <main className="home">
+        <Header />
            <RouteHandler {...this.props}/>
-           </main>
-      </div>
+          <Footer />
+      </main>
     );
   }
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import Trigger from './modal';
 import About from './about';
-import Router, { RouteHandler } from 'react-router';
 
 let Header  = React.createClass ({
   getInitialState(){
@@ -15,16 +14,14 @@ let Header  = React.createClass ({
 
   render() {
     return (
-      <div className='top'>
+      <header className='top'>
         <h1>Voices of Nashville</h1>
 
         <nav>
-          <Trigger/>
           <a href="/about" >About Page</a>
-          <a href="/" >Home</a>
-          <a href="/admin" >Admin</a>
+          <Trigger/>
         </nav>
-      </div>
+      </header>
     )
   }
 })

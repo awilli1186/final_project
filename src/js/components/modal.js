@@ -1,6 +1,7 @@
 import React from 'react';
 import StoryForm from './story-wizard/story_form';
 import Modal from 'boron/DropModal';
+var FontAwesome = require('react-fontawesome');
 
 
 var Trigger = React.createClass({
@@ -13,7 +14,12 @@ var Trigger = React.createClass({
     render: function() {
         return (
             <div>
-                <button className='add' onClick={this.showModal}>Add Story</button>
+                <button className='add' onClick={this.showModal}>
+                  <FontAwesome
+                    className='header-icon'
+                    name='plus-circle'
+                  />
+                  Add Story</button>
                 <Modal className='modal' ref="modal">
                   <button className='close' onClick={this.hideModal}>X</button>
                   <h2>Add Story</h2>

@@ -23,8 +23,6 @@ let Header  = React.createClass ({
           <a href="/about" >About Page</a>
           <a href="/" >Home</a>
           <a href="/admin" >Admin</a>
-          <a href="/admindash" >Admin Dashboard</a>
-
         </nav>
       </div>
     )

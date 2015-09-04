@@ -1,5 +1,22 @@
 import React from 'react';
-import App from './components/app'
-;
+import Router, { Route, DefaultRoute, RouteHandler, Link } from 'react-router';
 
-  React.render(<App/>, document.getElementById('app'));
+import Home from './components/home';
+import About from './components/about';
+import Map from './components/map/map';
+import Admin from './components/admin';
+import AdminDashboard from './components/admin-dashboard';
+
+let routes = (
+  <Route handler={Home} path='/'>
+    <DefaultRoute handler={Map} />
+    <Route name='about' path='about' handler={About} />
+    <Route name='admin' path='admin' handler={Admin} />
+    <Route name='admindash' path='admindash' handler={AdminDashboard} />
+  </Route>
+);
+
+
+Router.run(routes, Router.HistoryLocation, (Handler, state) => {
+  React.render(<Handler {...state}/>, document.querySelector('.app'));
+});

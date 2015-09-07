@@ -8,11 +8,17 @@ let Home = React.createClass ({
 
   render() {
     return (
-      <main className="home">
+      <div className="wrapper-for-content-outside-of-footer">
+      <header>
         <Header />
-           <RouteHandler {...this.props}/>
-          <Footer />
+      </header>
+      <main>
+        <RouteHandler {...this.props}/>
       </main>
+      <footer>
+        <Footer />
+      </footer>
+      </div>
     );
   }
 });

@@ -1,0 +1,22 @@
+
+.about {
+  @include span-columns(8);
+  @include shift(2);
+  h1 {
+    text-align: center;
+     color: $blue;
+     margin-top: 1em;
+  }
+  p {
+    margin: 15px;
+    line-height: 25px;
+  }
+  .span {
+    color: $blue;
+  }
+  a {
+    @include shift(5.35);
+    position: relative;
+    top: 2em;
+  }
+}

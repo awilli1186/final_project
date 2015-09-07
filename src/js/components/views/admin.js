@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Parse from '../parse';
-import User from '../user';
+import Parse from '../../parse';
+import User from '../../user';
 
 class Admin extends React.Component {
   onSubmit() {
@@ -29,12 +29,12 @@ class Admin extends React.Component {
 
   render () {
     return (
-      <section>
-        <h2>Login</h2>
+      <section className="login">
+        <h2>Admin Login</h2>
         <input ref="username" type="text" placeholder="Username"/>
         <input ref="password" type="password" placeholder="Password"/>
-        <button ref="login" onClick={this.onSubmit.bind(this)}>Login</button>
-         <a href="/" >Home</a>
+        <button className='btn btn-primary' ref="login" onClick={this.onSubmit.bind(this)}>Login</button>
+         <a className='home' href="/" >Home</a>
       </section>
     );
   }

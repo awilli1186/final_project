@@ -1,0 +1,49 @@
+// Base Layout Styles
+$blue   : #2989c6;
+$yellow : #F2E78F;
+$grey   : #ddd;
+$orange : #fb6733;
+$red    : #d33847;
+$white  : #fff;
+$darkblue: #2C3E50;
+
+// Helpers
+@mixin clear-fix {
+&:before,
+&:after {
+  content: "";
+  display: table;
+}
+&:after {
+  clear: both;
+}
+.lte7 & {
+  zoom: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $helvetica;
+}
+
+html, body {
+ height: 100%;
+}
+
+main {
+  height: auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+    transition: ease .2s;
+    color: $blue;
+  }
+}

@@ -12,8 +12,8 @@ var Trigger = React.createClass({
     render: function() {
         return (
             <div>
-                <button className='add' onClick={this.showModal}>
-                  Add Story</button>
+                <a className='add' onClick={this.showModal}>
+                  Add Story</a>
                 <Modal className='modal' ref="modal">
                   <button className='close' onClick={this.hideModal}>X</button>
                   <h2>Add Story</h2>

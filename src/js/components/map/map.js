@@ -6,7 +6,7 @@ import $ from 'jquery';
 let Map = React.createClass({
   render: function() {
     return (
-      <div className="container">
+      <div className="map">
         <Mapbox
           mapId="awilli1186.nbobioh0"
           zoomControl={true}
@@ -37,7 +37,7 @@ let Map = React.createClass({
         let media = story.media;
 
         let marker = L.marker(new L.LatLng(latitude, longitude), {
-          icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-size': 'large', 'marker-color': 'F2AE72'}),
+          icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-size': 'large', 'marker-color': '2989c6'}),
         });
 
         var popupContent =  `

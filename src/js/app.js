@@ -2,10 +2,10 @@ import React from 'react';
 import Router, { Route, DefaultRoute, RouteHandler, Link } from 'react-router';
 
 import Home from './components/home';
-import About from './components/about';
+import About from './components/views/about';
 import Map from './components/map/map';
-import Admin from './components/admin';
-import AdminDashboard from './components/admin-dashboard';
+import Admin from './components/views/admin';
+import AdminDashboard from './components/views/admin-dashboard';
 
 let routes = (
   <Route handler={Home} path='/'>

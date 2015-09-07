@@ -1,6 +1,5 @@
 import React from 'react';
 import Trigger from './modal';
-import About from './about';
 import Router, { RouteHandler } from 'react-router';
 
 let Footer  = React.createClass ({
@@ -16,9 +15,9 @@ let Footer  = React.createClass ({
   render() {
     return (
 
-      <footer className='footer'>
+      <div className='footer'>
           <a href="/admin" >Admin</a>
-      </footer>
+      </div>
     )
   }
 })

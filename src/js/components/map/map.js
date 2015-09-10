@@ -36,6 +36,7 @@ let Map = React.createClass({
         let address = story.address;
         let media = story.media;
 
+
         let marker = L.marker(new L.LatLng(latitude, longitude), {
           icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-size': 'large', 'marker-color': '2989c6'}),
         });
@@ -45,7 +46,7 @@ let Map = React.createClass({
 
         <img id="img" src="${media.url()}" /><br/>
 
-        ${disc} <br/>
+        <p>${disc}</p> <br/>
           ${address} <br/>
           ${date} <br/>
 
@@ -53,10 +54,10 @@ let Map = React.createClass({
 
         marker.bindPopup(popupContent, {
           className: 'popup',
-          keepInView: true,
-          closeButton: false,
+          keepInView: false,
+          closeButton: true,
           minWidth: 350,
-          minHeight: 300
+          minHeight: 300,
         });
         markers.addLayer(marker);
 

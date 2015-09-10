@@ -22,10 +22,6 @@ let StoryFields = React.createClass({
             <label>Historic Date</label>
             <input type="text" ref="date" placeholder='mm-dd-yyyy' defaultValue={this.props.fieldValues.date} />
           </li>
-          <li>
-            <label>Tags</label>
-            <input type="text" ref="tags" defaultValue={this.props.fieldValues.tag} />
-          </li>
           <li className="form-footer">
             <button className="btn btn-default pull-left" onClick={this.props.previousStep}>Back</button>
             <button className="btn btn-primary pull-right" onClick={this.saveAndContinue}>Save &amp; Continue</button>
@@ -43,8 +39,7 @@ let StoryFields = React.createClass({
       title : React.findDOMNode(this.refs.title).value,
       story : React.findDOMNode(this.refs.story).value,
       name : React.findDOMNode(this.refs.name).value,
-      date : React.findDOMNode(this.refs.date).value,
-      tag : React.findDOMNode(this.refs.tags).value
+      date : React.findDOMNode(this.refs.date).value
     }
 
     this.props.saveValues(data)

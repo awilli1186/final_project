@@ -4,7 +4,6 @@ class User {
     this.loggedIn = false;
     this.username = 'Anonymous';
     this.email = null;
-    this.phone = null;
   }
 
   login() {
@@ -21,7 +20,6 @@ class User {
     let user = data.attributes;
     this.username = user.username;
     this.email = user.email;
-    this.phone = user.phone;
     return this;
   }
 }

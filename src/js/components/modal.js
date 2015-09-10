@@ -7,6 +7,7 @@ var Trigger = React.createClass({
         this.refs.modal.show();
     },
     hideModal: function(){
+      this.context.router.transitionTo('/');
         this.refs.modal.hide();
     },
     render: function() {
@@ -23,5 +24,9 @@ var Trigger = React.createClass({
         );
     }
 });
+
+Trigger.contextTypes = {
+    router: React.PropTypes.func
+};
 
 export default Trigger;

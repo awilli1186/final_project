@@ -1,0 +1,40 @@
+.dashboard {
+  @include span-columns(10);
+  @include shift(1);
+
+  h2 {
+    text-align: center;
+    color: $blue;
+  }
+  p {
+    text-align: center;
+    color:$red;
+  }
+  a {
+    @include shift(5.5);
+    }
+  }
+
+  #list {
+    @include span-columns(10);
+    @include shift(1);
+    li {
+      @include span-columns(6 of 10);
+      display: block;
+      background: $grey;
+      border-bottom: 1px solid $grey;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 12px;
+      color: black;
+      text-align: justify;
+    }
+    .story {
+      overflow-wrap: break-word;
+    }
+    img {
+      float: right;
+      width:50px;
+    }
+  }

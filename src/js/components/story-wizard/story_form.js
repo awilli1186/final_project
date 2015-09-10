@@ -15,8 +15,7 @@ let fieldValues = {
   story      : '',
   name       : '',
   date       : '',
-  media      : null,
-  tag        : ''
+  media      : null
 }
 
 let StoryForm = React.createClass({

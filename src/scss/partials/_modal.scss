@@ -84,6 +84,15 @@
 
 .modal {
   padding: 10px;
+  .close {
+    float: right;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    left: 0;
+  }
 }
 
 .loc-output {
@@ -91,4 +100,10 @@
   font-size: 18px;
   color: #F2AE72;
   text-shadow: .5px 1px black;
+}
+
+.confirmation {
+  p {
+    overflow-wrap: break-word;
+  }
 }

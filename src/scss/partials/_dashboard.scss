@@ -1,6 +1,8 @@
 .dashboard {
   @include span-columns(10);
   @include shift(1);
+  min-height: 650px;
+  padding-bottom: 60px;
 
   h2 {
     text-align: center;
@@ -14,10 +16,11 @@
     @include shift(5.5);
     }
   }
-
+  
   #list {
     @include span-columns(10);
-    @include shift(1);
+    @include shift(2.7);
+
     li {
       @include span-columns(6 of 10);
       display: block;

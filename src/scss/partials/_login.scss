@@ -1,6 +1,7 @@
 .login {
   @include span-columns(2);
   @include shift(4.9);
+  min-height: 650px;
   h2 {
     margin-top: 1em;
     color: $blue;

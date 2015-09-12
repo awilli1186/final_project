@@ -4,6 +4,7 @@ import {Parse} from 'parse';
 import $ from 'jquery';
 
 let Map = React.createClass({
+
   render: function() {
     return (
       <div className="map">
@@ -69,6 +70,7 @@ let Map = React.createClass({
     }).fail(error => {
       alert("Error: " + error.code + " " + error.message)
     });
+
   }
 });
 

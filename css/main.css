@@ -1,0 +1,332 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helevitca', sans-serif; }
+
+html, body {
+  height: 100%; }
+
+main {
+  position: relative; }
+
+a {
+  text-decoration: none;
+  color: black; }
+  a:hover {
+    text-decoration: underline;
+    transition: ease 0.2s;
+    color: #0672B5; }
+
+.btn {
+  border-radius: 1px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer; }
+  .btn.btn-default {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #ddd; }
+  .btn.btn-primary {
+    background-color: #0672B5;
+    border: 1px solid #0672B5;
+    margin-top: 1.5em; }
+  .btn:hover {
+    background-color: #eee;
+    transition: ease 0.5s;
+    color: #0672B5;
+    text-decoration: none; }
+
+:disabled {
+  background-color: #d33847 !important; }
+  :disabled:hover {
+    color: white; }
+
+.progress1 {
+  margin-bottom: 20px;
+  transition: all 0.2s ease; }
+
+.progress-step {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left;
+  margin-top: 1.5em; }
+
+.form-fields {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .form-fields > li {
+    margin-bottom: 20px; }
+
+.form-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding-top: 20px; }
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px; }
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px; }
+  label input {
+    left: 0;
+    position: absolute;
+    top: 0; }
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%; }
+
+textarea {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%; }
+
+select {
+  font-size: 16px;
+  padding: 8px; }
+
+.modal {
+  padding: 10px; }
+  .modal .close {
+    float: right;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    left: 0; }
+
+.loc-output {
+  margin: 10px;
+  font-size: 18px;
+  color: #F2AE72;
+  text-shadow: 0.5px 1px black; }
+
+.confirmation .story {
+  word-wrap: break-word; }
+
+.top {
+  position: relative;
+  width: inherit;
+  height: 75px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #2C3E50;
+  background: #2C3E50; }
+  .top .logo {
+    margin-left: 29.85432%;
+    position: relative;
+    top: 13px; }
+  .top a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    bottom: .5em;
+    left: 2em; }
+    .top a:hover {
+      color: #fff;
+      transition: ease 0.5s;
+      text-decoration: none; }
+  .top .add {
+    left: 72em;
+    bottom: 1.5em;
+    cursor: pointer; }
+
+.footer {
+  position: static;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  clear: both;
+  background-color: #2C3E50; }
+  .footer a {
+    margin-left: 46.91392%;
+    position: relative;
+    top: 22px;
+    color: #eee; }
+
+.map {
+  margin: 0;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  top: 1.5em; }
+
+.leaflet-popup-content {
+  text-align: center;
+  background: #2C3E50;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px; }
+
+.popup {
+  overflow: hidden; }
+  .popup img {
+    width: 100%;
+    height: auto; }
+  .popup p {
+    word-wrap: break-word; }
+
+.login {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  margin-left: 41.79604%;
+  min-height: 650px; }
+  .login:last-child {
+    margin-right: 0; }
+  .login h2 {
+    margin-top: 1em;
+    color: #0672B5;
+    text-align: center;
+    margin-bottom: 15px; }
+  .login input {
+    margin-bottom: 10px; }
+  .login button {
+    margin-left: 32.41326%; }
+  .login a {
+    position: relative;
+    top: 4em;
+    right: 4.4em; }
+
+.dashboard {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 7.67682%;
+  min-height: 650px;
+  padding-bottom: 60px;
+  position: relative;
+  top: 25px; }
+  .dashboard:last-child {
+    margin-right: 0; }
+  .dashboard #logout {
+    margin-left: 46.91392%;
+    margin-bottom: 10px; }
+  .dashboard h2 {
+    text-align: center;
+    color: #0672B5; }
+  .dashboard p {
+    text-align: center;
+    color: #d33847;
+    position: inherit;
+    top: 15px;
+    margin-bottom: 15px; }
+  .dashboard a {
+    margin-left: 46.91392%;
+    position: inherit;
+    top: 20px; }
+
+#list {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 25.58941%; }
+  #list:last-child {
+    margin-right: 0; }
+  #list li {
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 58.86297%;
+    text-align: justify;
+    display: block;
+    background: #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 5px; }
+    #list li:last-child {
+      margin-right: 0; }
+  #list p {
+    font-size: 14px;
+    color: black;
+    text-align: justify; }
+  #list .story {
+    overflow-wrap: break-word; }
+  #list img {
+    float: right;
+    width: 150px; }
+
+.about {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  min-height: 650px;
+  position: relative; }
+  .about:last-child {
+    margin-right: 0; }
+  .about .background {
+    background-image: url("http://www.klassikashow.com/wp-content/uploads/2015/06/Nashville-Skyline-at-Night.jpg");
+    background-repeat: no-repeat;
+    width: inherit;
+    height: inherit;
+    opacity: .2;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .about .content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 24.30994%;
+    opacity: 1;
+    z-index: 1; }
+    .about .content:last-child {
+      margin-right: 0; }
+    .about .content h1 {
+      text-align: center;
+      color: black;
+      margin-top: 1em; }
+    .about .content p {
+      margin: 15px;
+      font-size: 22px;
+      line-height: 25px;
+      color: black; }
+    .about .content a {
+      margin-left: 45.63445%;
+      position: relative;
+      top: 2em;
+      border-radius: 5px;
+      color: black;
+      background-color: #F2E78F;
+      border: 1px solid #F2E78F; }

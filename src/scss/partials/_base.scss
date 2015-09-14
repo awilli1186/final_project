@@ -1,5 +1,5 @@
 // Base Layout Styles
-// $blue   : #2989c6;
+
 $yellow : #F2E78F;
 $grey   : #ddd;
 $orange : #fb6733;
@@ -7,6 +7,7 @@ $red    : #d33847;
 $white  : #fff;
 $darkblue: #2C3E50;
 $blue  : #0672B5;
+
 // Helpers
 @mixin clear-fix {
 &:before,
@@ -36,7 +37,7 @@ html, body {
 main {
   height: auto;
   position: relative;
-   padding-bottom: 60px; 
+   padding-bottom: 60px;
 }
 
 a {

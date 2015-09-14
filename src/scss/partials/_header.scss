@@ -5,8 +5,11 @@
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $darkblue;
-  background: linear-gradient(#0672B5, $darkblue);
+  // background: linear-gradient(#0672B5, $darkblue);
+  background: $darkblue;
 
+  .logo {
+    left: 0;
   h1 {
     font-size: 35px;
     font-family: 'Lobster', cursive;
@@ -16,6 +19,7 @@
     position: relative;
     top: .5em;
   }
+}
     a {
       color: $yellow;
       font-weight: bold;

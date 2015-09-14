@@ -17,6 +17,7 @@ let Map = React.createClass({
       </div>
     );
   },
+  
   _onMapCreated(map, L) {
 
     let Story = Parse.Object.extend("Story");

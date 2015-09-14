@@ -15,7 +15,7 @@ let Header  = React.createClass ({
   render() {
     return (
       <div className='top'>
-        <h1>Voices of Nashville</h1>
+        <a className="logo" href="/map" ><h1>Voices of Nashville</h1></a>
         <nav>
           <a href="/about" >About Page</a>
           <Trigger/>

@@ -12,11 +12,11 @@
     margin-bottom: 10px;
   }
   button {
-    @include shift(4);
+    @include shift(3.8);
   }
-  .home {
+  a {
     position: relative;
-    top:4em;
-    right: 3.8em;
+    top: 4em;
+    right: 4.4em;
   }
 }

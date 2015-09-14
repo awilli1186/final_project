@@ -8,7 +8,7 @@ let Confirmation = React.createClass({
         <ul>
           <li><b>Location:</b> {this.props.fieldValues.location.placeName}</li>
           <li><b>Title:</b> {this.props.fieldValues.title}</li>
-          <li><b>Story:</b> <p>{this.props.fieldValues.story}</p></li>
+          <li><b>Story:</b> {this.props.fieldValues.story}</li>
           <li><b>Name:</b> {this.props.fieldValues.name}</li>
           <li><b>Date:</b> {this.props.fieldValues.date}</li>
           <li><b>Media:</b> {this.props.fieldValues.media.name()}</li>

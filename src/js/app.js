@@ -8,7 +8,7 @@ import Admin from './components/views/admin';
 import AdminDashboard from './components/views/admin-dashboard';
 
 let routes = (
-  <Route handler={Home} path='/'>
+  <Route handler={Home} path='/voices_of_nashville'>
     <DefaultRoute handler={Map} />
     <Route name='map' path='map' handler={Map} />
     <Route name='about' path='about' handler={About} />

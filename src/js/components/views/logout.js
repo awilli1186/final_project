@@ -9,7 +9,7 @@ class LogoutButton extends React.Component {
 
   render() {
     return(
-      <button className="btn btn-primary" onClick={this.onLogout.bind(this)} >Logout</button>
+      <button id='logout' className="btn btn-primary" onClick={this.onLogout.bind(this)} >Logout</button>
     )
   }
 }

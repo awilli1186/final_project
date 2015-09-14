@@ -1,24 +1,47 @@
 
 .about {
-  @include span-columns(8);
-  @include shift(2);
+  @include span-columns(12);
   min-height: 650px;
-  
+  position: relative;
+
+  .background {
+  background-image: url("http://www.klassikashow.com/wp-content/uploads/2015/06/Nashville-Skyline-at-Night.jpg");
+  background-repeat: no-repeat;
+  width: inherit;
+  height: inherit;
+  opacity: .2;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  }
+
+  .content {
+    @include span-columns(6);
+    @include shift(2.85);
+    opacity: 1;
+    z-index: 1;
   h1 {
     text-align: center;
-     color: $blue;
+     color: black;
      margin-top: 1em;
   }
   p {
     margin: 15px;
+    font-size: 22px;
     line-height: 25px;
-  }
-  .span {
-    color: $blue;
+    color: black;
   }
   a {
     @include shift(5.35);
     position: relative;
     top: 2em;
+    border-radius: 5px;
+    color: black;
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    }
   }
 }

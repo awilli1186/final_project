@@ -16,7 +16,7 @@ let Footer  = React.createClass ({
     return (
 
       <div className='footer'>
-          <a href="/admin" >Admin</a>
+          <a href="/admin" >ADMIN</a>
       </div>
     )
   }

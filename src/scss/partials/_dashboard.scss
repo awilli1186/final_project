@@ -1,9 +1,15 @@
 .dashboard {
   @include span-columns(10);
-  @include shift(1);
+  @include shift(.9);
   min-height: 650px;
   padding-bottom: 60px;
+  position: relative;
+  top: 25px;
 
+  #logout {
+    @include shift(5.5);
+    margin-bottom: 10px;
+  }
   h2 {
     text-align: center;
     color: $blue;
@@ -11,25 +17,32 @@
   p {
     text-align: center;
     color:$red;
+    position: inherit;
+    top:15px;
+    margin-bottom: 15px;
   }
   a {
     @include shift(5.5);
+    position: inherit;
+    top:20px;
     }
   }
-  
+
   #list {
     @include span-columns(10);
-    @include shift(2.7);
+    @include shift(3);
 
     li {
       @include span-columns(6 of 10);
+      text-align: justify;
       display: block;
       background: $grey;
       border-bottom: 1px solid $grey;
       margin-bottom: 5px;
+      padding: 5px;
     }
     p {
-      font-size: 12px;
+      font-size: 14px;
       color: black;
       text-align: justify;
     }
@@ -38,6 +51,6 @@
     }
     img {
       float: right;
-      width:50px;
+      width: 150px;
     }
   }

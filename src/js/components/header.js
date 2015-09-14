@@ -15,9 +15,9 @@ let Header  = React.createClass ({
   render() {
     return (
       <div className='top'>
-        <a className="logo" href="/map" ><h1>Voices of Nashville</h1></a>
+        <a className="logo" href="/map" ><img src={"./images/VON1.png"} alt='Voices of Nashville' /></a>
         <nav>
-          <a href="/about" >About Page</a>
+          <a href="/about" >ABOUT PAGE</a>
           <Trigger/>
         </nav>
       </div>

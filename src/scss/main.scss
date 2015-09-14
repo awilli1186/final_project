@@ -1,6 +1,5 @@
 @import "dist/bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "dist/bower_components/neat/app/assets/stylesheets/_neat.scss";
-@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 // Partials
 @import 'partials/base';
@@ -10,5 +9,5 @@
 @import 'partials/footer';
 @import 'partials/map';
 @import 'partials/login';
-@import 'partials/dashboard'; 
+@import 'partials/dashboard';
 @import 'partials/about';

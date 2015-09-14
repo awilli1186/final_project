@@ -17,7 +17,7 @@ let Map = React.createClass({
       </div>
     );
   },
-  
+
   _onMapCreated(map, L) {
 
     let Story = Parse.Object.extend("Story");
@@ -56,7 +56,7 @@ let Map = React.createClass({
 
         marker.bindPopup(popupContent, {
           className: 'popup',
-          keepInView: false,
+          keepInView: true,
           closeButton: true,
           minWidth: 350,
           minHeight: 300,

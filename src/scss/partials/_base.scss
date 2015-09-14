@@ -27,7 +27,7 @@ $blue  : #0672B5;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $helvetica;
+  font-family: 'Helevitca', sans-serif;
 }
 
 html, body {
@@ -35,9 +35,7 @@ html, body {
 }
 
 main {
-  height: auto;
   position: relative;
-   padding-bottom: 60px;
 }
 
 a {

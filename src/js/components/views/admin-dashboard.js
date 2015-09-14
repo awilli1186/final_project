@@ -105,7 +105,7 @@ class AdminDashboard extends React.Component {
             {list}
           </div>
 
-        <a href="map" >Home</a>
+        <a href="map" className="btn btn-primary">HOME</a>
       </section>
     )
   }

@@ -14,10 +14,10 @@ var Trigger = React.createClass({
         return (
             <div>
                 <a className='add' onClick={this.showModal}>
-                  Add Story</a>
+                  ADD STORY</a>
                 <Modal className='modal' ref="modal">
                   <button className='close' onClick={this.hideModal}>X</button>
-                  <h2>Add Story</h2>
+                  <h2>ADD STORY</h2>
                     <StoryForm />
                 </Modal>
             </div>

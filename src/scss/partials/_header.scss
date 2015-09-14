@@ -5,27 +5,19 @@
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $darkblue;
-  // background: linear-gradient(#0672B5, $darkblue);
   background: $darkblue;
 
   .logo {
-    left: 0;
-  h1 {
-    font-size: 35px;
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
-    text-align: center;
-    color: $yellow;
+    @include shift(3.5);
     position: relative;
-    top: .5em;
-  }
+    top:13px;
 }
     a {
-      color: $yellow;
+      color: $white;
       font-weight: bold;
       font-size: 18px;
       position: relative;
-      top: 0em;
+      bottom: .5em;
       left: 2em;
       &:hover {
         color: $white;
@@ -35,7 +27,7 @@
     }
     .add {
       left: 72em;
-      top: -1.3em;
+      bottom: 1.5em;
       cursor: pointer;
     }
   }

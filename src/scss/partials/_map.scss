@@ -15,11 +15,12 @@
 }
 
 .popup {
+  overflow: hidden;
   img {
     width: 100%;
-    max-height: 175px;
+    height: auto;
   }
   p {
-    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 }

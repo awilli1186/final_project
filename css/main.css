@@ -126,6 +126,15 @@ select {
     background-color: white;
     color: black;
     left: 0; }
+  .modal .closeAbout {
+    position: relative;
+    left: 11.5em;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 1px;
+    background-color: #F2E78F;
+    border: 1px solid #F2E78F; }
 
 .loc-output {
   margin: 10px;
@@ -154,7 +163,8 @@ select {
     font-size: 18px;
     position: relative;
     bottom: .5em;
-    left: 2em; }
+    left: 2em;
+    cursor: pointer; }
     .top a:hover {
       color: #fff;
       transition: ease 0.5s;
@@ -283,50 +293,15 @@ select {
     width: 150px; }
 
 .about {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  min-height: 650px;
-  position: relative; }
-  .about:last-child {
-    margin-right: 0; }
-  .about .background {
-    background-image: url("http://www.klassikashow.com/wp-content/uploads/2015/06/Nashville-Skyline-at-Night.jpg");
-    background-repeat: no-repeat;
-    width: inherit;
-    height: inherit;
-    opacity: .2;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; }
-  .about .content {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 24.30994%;
-    opacity: 1;
-    z-index: 1; }
-    .about .content:last-child {
-      margin-right: 0; }
-    .about .content h1 {
-      text-align: center;
-      color: black;
-      margin-top: 1em; }
-    .about .content p {
-      margin: 15px;
-      font-size: 22px;
-      line-height: 25px;
-      color: black; }
-    .about .content a {
-      margin-left: 45.63445%;
-      position: relative;
-      top: 2em;
-      border-radius: 5px;
-      color: black;
-      background-color: #F2E78F;
-      border: 1px solid #F2E78F; }
+  position: relative;
+  z-index: 15; }
+  .about .content h1 {
+    text-align: center;
+    color: #F2E78F;
+    margin-top: 1em; }
+  .about .content p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff; }

@@ -30,7 +30,7 @@ let SearchFields = React.createClass({
         };
 
         self.setState({
-          value: event.target.value,
+          value: React.findDOMNode(this.refs.location).value,
           location
         });
       }

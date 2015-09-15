@@ -4,19 +4,31 @@ import {Parse} from 'parse';
 var ParseReact = require('parse-react');
 
 let MediaFields = React.createClass({
+  getInitialState() {
+    return {media: null}
+  },
+
+  handleChange(e) {
+   this.setState({media: e.target.value})
+ },
 
   render() {
+    let media;
+    if (this.state.media) {
+      media = this.state.media;
+    }
+
     return (
       <div>
         <h2>Add Media</h2>
         <ul className="form-fields">
           <li>
             <label>Photo</label>
-                <input type="file" ref='media' defaultValue={this.props.fieldValues.media} />
+                <input type="file" ref='media' defaultValue={this.props.fieldValues.media} onChange={this.handleChange} />
           </li>
           <li className="form-footer">
              <button className="btn btn-default pull-left" onClick={this.props.previousStep}>Back</button>
-            <button className="btn btn-primary pull-right" onClick={this.saveAndContinue}>Save & Continue</button>
+            <button className="btn btn-primary pull-right" onClick={this.saveAndContinue} disabled={!media}>Save & Continue</button>
           </li>
         </ul>
       </div>

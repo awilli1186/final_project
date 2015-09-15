@@ -4,7 +4,7 @@ import {Parse} from 'parse';
 import $ from 'jquery';
 import jQuery from 'jquery'
 import LogoutButton from '../views/logout';
-import Router, { RouteHandler, Link } from 'react-router';
+import Router, { Link } from 'react-router';
 
 class AdminDashboard extends React.Component {
   constructor(props) {
@@ -16,7 +16,13 @@ class AdminDashboard extends React.Component {
   componentDidMount () {
     let Story = Parse.Object.extend("Story");
     let Stories = Parse.Collection.extend({
-      model: Story
+      model: Story,
+      comparator: function(a, b) {
+        if(a.createdAt > b.createdAt) {
+          return -1;
+        }
+        return 1;
+      }
     });
 
     let stories = new Stories();
@@ -32,14 +38,12 @@ class AdminDashboard extends React.Component {
               date: story.date,
               name: story.name,
               media: story.media,
-              createdAt: story.updatedAt,
+              createdAt: data.createdAt,
             };
          });
           this.setState({
             stories: stories
           });
-        },
-        error: (MyObject, error) => {
         }
       });
     }
@@ -90,6 +94,7 @@ class AdminDashboard extends React.Component {
               <p>{story.address}</p>
               <p>{story.name}</p>
               <p>{story.date}</p>
+              <p>Created: {story.createdAt.toString()}</p>
              {media}
              <button type="button" className="btn btn-primary" onClick={this.deleteStory.bind(this, story.id)}>Delete</button>
             </li>

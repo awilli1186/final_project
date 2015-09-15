@@ -48,6 +48,11 @@ a {
     color: #0672B5;
     text-decoration: none; }
 
+#submit:hover {
+  background-color: #0672B5;
+  transition: none;
+  color: #ddd; }
+
 :disabled {
   background-color: #d33847 !important; }
   :disabled:hover {
@@ -131,6 +136,7 @@ select {
     left: 11.5em;
     padding: 5px;
     font-size: 18px;
+    font-weight: bold;
     margin-top: 10px;
     border-radius: 1px;
     background-color: #F2E78F;
@@ -170,8 +176,9 @@ select {
       transition: ease 0.5s;
       text-decoration: none; }
   .top .add {
-    left: 72em;
-    bottom: 1.5em;
+    float: right;
+    bottom: 1.7em;
+    left: -2em;
     cursor: pointer; }
 
 .footer {
@@ -215,7 +222,7 @@ select {
   margin-right: 2.35765%;
   width: 14.70196%;
   margin-left: 41.79604%;
-  min-height: 650px; }
+  min-height: 750px; }
   .login:last-child {
     margin-right: 0; }
   .login h2 {

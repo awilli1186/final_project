@@ -243,12 +243,10 @@ select {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 7.67682%;
-  min-height: 650px;
+  width: 100%;
+  min-height: 750px;
   padding-bottom: 60px;
-  position: relative;
-  top: 25px; }
+  background-color: #F1F1F1; }
   .dashboard:last-child {
     margin-right: 0; }
   .dashboard #logout {
@@ -272,20 +270,24 @@ select {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 25.58941%; }
+  width: 57.35098%;
+  margin-left: 21.32451%;
+  background-color: #F1F1F1;
+  padding: 15px;
+  border-radius: 4px; }
   #list:last-child {
     margin-right: 0; }
   #list li {
     float: left;
     display: block;
-    margin-right: 2.84259%;
-    width: 58.86297%;
+    margin-right: 4.82916%;
+    width: 100%;
     text-align: justify;
     display: block;
-    background: #ddd;
+    background: #fff;
     border-bottom: 1px solid #ddd;
     margin-bottom: 5px;
+    border-radius: 4px;
     padding: 5px; }
     #list li:last-child {
       margin-right: 0; }

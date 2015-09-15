@@ -2,57 +2,72 @@ import React from "react";
 import Mapbox from "../map/mapbox";
 import {Parse} from 'parse';
 import $ from 'jquery';
+import StoryAction from '../../actions/story';
+import StoriesStore from '../../stores/stories';
 
 let Map = React.createClass({
+
+  getInitialState: function() {
+    return {
+      stories: []
+    };
+  },
+
+  componentDidMount: function() {
+    StoryAction.loadAll();
+
+    StoriesStore.addChangeListener(() => {
+      this.setState({
+        stories: StoriesStore.getState().stories
+      });
+
+      this.renderMarkers(this.state.map, this.state.L);
+    });
+  },
 
   render: function() {
     return (
       <div className="map">
         <Mapbox
+          ref="map"
           mapId="awilli1186.nbobioh0"
           zoomControl={true}
           scrollWheelZoom={false}
-          center={[36.161589,-86.7739455]} zoom={12}
-          onMapCreated={this._onMapCreated}/>
+          center={[36.161589,-86.7739455]}
+          zoom={12}
+          onMapCreated={this.onMapCreated}
+          />
       </div>
     );
   },
 
-  _onMapCreated(map, L) {
-
-    let Story = Parse.Object.extend("Story");
-    let query = new Parse.Query(Story);
-
-    query.select('location', 'address', 'title', 'media', 'story', 'name', 'date');
-    query.find().then(results => {
-
+  renderMarkers: function(map, L) {
+    if (this.state.stories) {
       let markers = new L.MarkerClusterGroup();
 
-      results.forEach(data => {
+      this.state.stories.forEach(data => {
         let story = data.attributes;
         let {latitude, longitude} = story.location;
-        let title = story.title;
-        let disc = story.story;
-        let name = story.name;
-        let date = story.date;
-        let address = story.address;
-        let media = story.media;
-
-
+        let { title, disc, name, date, address, media} = story;
         let marker = L.marker(new L.LatLng(latitude, longitude), {
-          icon: L.mapbox.marker.icon({'marker-symbol': 'marker-stroked', 'marker-size': 'large', 'marker-color': '2989c6'}),
+          icon: L.mapbox.marker.icon({
+            'marker-symbol': 'marker-stroked',
+            'marker-size': 'large',
+            'marker-color': '2989c6'
+          })
         });
 
-        var popupContent =  `
+        let popupContent =  `
           ${title} <br/>
 
-        <img id="img" src="${media.url()}" /><br/>
+          <img id="img" src="${media.url()}" /><br/>
 
-        <p>${disc}</p> <br/>
-          ${address} <br/>
-          ${date} <br/>
+          <p>${disc}</p> <br/>
+            ${address} <br/>
+            ${date} <br/>
 
-        Submitted by: ${name}`;
+          Submitted by: ${name}
+        `;
 
         marker.bindPopup(popupContent, {
           className: 'popup',
@@ -61,17 +76,21 @@ let Map = React.createClass({
           minWidth: 350,
           minHeight: 300,
         });
-        markers.addLayer(marker);
 
+        markers.addLayer(marker);
       });
 
       map.addLayer(markers);
+    }
+  },
+  onMapCreated: function(map, L){
 
-      return results;
-    }).fail(error => {
-      alert("Error: " + error.code + " " + error.message)
+    this.setState({
+      map: map,
+      L: L
     });
 
+    this.renderMarkers(map, L);
   }
 });
 

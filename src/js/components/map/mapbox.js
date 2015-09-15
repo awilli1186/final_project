@@ -1,6 +1,13 @@
 import React from 'react';
 
 let Mapbox = React.createClass({
+  getInitialState: function() {
+    return {
+      map: null,
+      L: null
+    };
+  },
+
   componentDidMount: function(argument) {
     let props = this.props;
 
@@ -20,6 +27,8 @@ let Mapbox = React.createClass({
       this.props.onMapCreated(map, L);
     }
   },
+
+
 
   render: function() {
   let mapStyle = {

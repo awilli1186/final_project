@@ -1,5 +1,5 @@
 import React from 'react';
-import Router, { Route, DefaultRoute, RouteHandler, Link } from 'react-router';
+import Router, { Route, DefaultRoute, RouteHandler, Link, Redirect } from 'react-router';
 
 import Home from './components/home';
 import Map from './components/map/map';

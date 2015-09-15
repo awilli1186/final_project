@@ -31,7 +31,8 @@ class AdminDashboard extends React.Component {
               address: story.address,
               date: story.date,
               name: story.name,
-              media: story.media
+              media: story.media,
+              createdAt: story.updatedAt,
             };
          });
           this.setState({

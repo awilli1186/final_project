@@ -28,6 +28,13 @@
   }
   }
 
+  #submit {
+    &:hover {
+      background-color: $blue;
+      transition: none;
+      color: $grey;
+    }
+  }
   &:disabled {
     background-color: $red !important;
 

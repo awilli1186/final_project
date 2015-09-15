@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Parse from '../../parse';
 import $ from 'jquery';
@@ -8,6 +7,8 @@ import MediaFields from '../story-wizard/media-fields';
 import Confirmation from '../story-wizard/confirmation';
 import Success from '../story-wizard/success';
 import assign from 'object-assign';
+import StoryAction from '../../actions/story';
+import StoriesStore from '../../stores/stories';
 
 let fieldValues = {
   location   : null,
@@ -19,6 +20,15 @@ let fieldValues = {
 }
 
 let StoryForm = React.createClass({
+
+  componentDidMount: function() {
+    StoriesStore.addChangeListener(() => {
+      if (!StoriesStore.getState().loading) {
+        this.nextStep();
+      }
+    });
+  },
+
   getInitialState() {
     return {
       step : 1
@@ -44,22 +54,7 @@ let StoryForm = React.createClass({
   },
 
   submitStory() {
-
-    let point = new Parse.GeoPoint(fieldValues.location.coordinates);
-    let Story = Parse.Object.extend("Story");
-    let story = new Story();
-
-    story.set('location', point);
-    story.set('address', fieldValues.location.placeName);
-    story.set('title', fieldValues.title);
-    story.set('story', fieldValues.story);
-    story.set('name', fieldValues.name);
-    story.set('date', fieldValues.date);
-    story.set('media', fieldValues.media);
-
-    story.save(story).then(function(object) {
-    });
-  this.nextStep()
+    StoryAction.addStory(fieldValues);
   },
 
   showStep() {
@@ -82,7 +77,8 @@ let StoryForm = React.createClass({
       case 4:
         return <Confirmation fieldValues={fieldValues}
                              previousStep={this.previousStep}
-                             submitStory={this.submitStory} />
+                             submitStory={this.submitStory}
+                             />
 
       case 5:
         return <Success />

@@ -1,6 +1,9 @@
 import React from 'react';
 
 var Success = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.func
+  },
   render: function() {
     return (
       <div>
@@ -8,6 +11,7 @@ var Success = React.createClass({
       </div>
     )
   }
-})
+});
+
 
 export default Success;

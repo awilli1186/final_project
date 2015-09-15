@@ -48,7 +48,8 @@ let Map = React.createClass({
       this.state.stories.forEach(data => {
         let story = data.attributes;
         let {latitude, longitude} = story.location;
-        let { title, disc, name, date, address, media} = story;
+        let disc = story.story;
+        let { title, name, date, address, media} = story;
         let marker = L.marker(new L.LatLng(latitude, longitude), {
           icon: L.mapbox.marker.icon({
             'marker-symbol': 'marker-stroked',

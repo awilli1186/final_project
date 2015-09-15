@@ -2,6 +2,7 @@ import React from 'react';
 
 import Parse from '../../parse';
 import User from '../../user';
+import Router, { RouteHandler, Link } from 'react-router';
 
 class Admin extends React.Component {
   onSubmit() {
@@ -34,7 +35,7 @@ class Admin extends React.Component {
         <input ref="username" type="text" placeholder="Username"/>
         <input ref="password" type="password" placeholder="Password"/>
         <button className='btn btn-primary' ref="login" onClick={this.onSubmit.bind(this)}>Login</button>
-         <a className='btn btn-primary' href="map" >HOME</a>
+         <Link to="map" className="btn btn-primary">HOME</Link>
       </section>
     );
   }

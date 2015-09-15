@@ -1,6 +1,6 @@
 import React from 'react';
 import Trigger from './modal';
-import Router, { RouteHandler } from 'react-router';
+import Router, { RouteHandler, Link } from 'react-router';
 
 let Footer  = React.createClass ({
   getInitialState(){
@@ -16,7 +16,7 @@ let Footer  = React.createClass ({
     return (
 
       <div className='footer'>
-          <a href="/admin" >ADMIN</a>
+          <Link to="/admin" >ADMIN</Link>
       </div>
     )
   }

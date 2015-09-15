@@ -2,6 +2,7 @@ import React from 'react';
 import Trigger from './modal';
 import About from './views/about';
 import AboutModal from './about_modal';
+import Router, { RouteHandler, Link } from 'react-router';
 
 let Header  = React.createClass ({
   getInitialState(){
@@ -16,7 +17,7 @@ let Header  = React.createClass ({
   render() {
     return (
       <div className='top'>
-        <a className="logo" href="/map" ><img src={"./images/VON1.png"} alt='Voices of Nashville' /></a>
+        <Link className="logo" to="/map" ><img src={"./images/VON1.png"} alt='Voices of Nashville' /></Link>
         <nav>
           <AboutModal />
           <Trigger />

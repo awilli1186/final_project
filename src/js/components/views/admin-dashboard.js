@@ -4,6 +4,7 @@ import {Parse} from 'parse';
 import $ from 'jquery';
 import jQuery from 'jquery'
 import LogoutButton from '../views/logout';
+import Router, { RouteHandler, Link } from 'react-router';
 
 class AdminDashboard extends React.Component {
   constructor(props) {
@@ -105,7 +106,7 @@ class AdminDashboard extends React.Component {
             {list}
           </div>
 
-        <a href="map" className="btn btn-primary">HOME</a>
+        <Link to="map" className="btn btn-primary">HOME</Link>
       </section>
     )
   }

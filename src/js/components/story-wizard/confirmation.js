@@ -19,7 +19,7 @@ let Confirmation = React.createClass({
   render: function() {
     let submitText = 'Submit Story';
     if (this.state.loading) {
-      submitText = <img src="/images/728.GIF" alt="Loading..."/>
+      submitText = <img src="/images/4.GIF" alt="Loading..."/>
     }
     return (
       <div className="confirmation">

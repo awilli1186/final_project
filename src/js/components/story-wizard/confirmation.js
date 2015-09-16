@@ -10,7 +10,6 @@ let Confirmation = React.createClass({
 
   componentDidMount: function() {
     StoriesStore.addChangeListener(() => {
-      console.log('called change', StoriesStore.getState().loading);
       this.setState({
         loading: StoriesStore.getState().loading
       });

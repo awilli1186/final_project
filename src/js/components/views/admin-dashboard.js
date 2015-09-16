@@ -4,6 +4,7 @@ import {Parse} from 'parse';
 import $ from 'jquery';
 import jQuery from 'jquery'
 import LogoutButton from '../views/logout';
+import LoginButton from '../views/loginbtn';
 import Router, { Link } from 'react-router';
 
 class AdminDashboard extends React.Component {
@@ -21,7 +22,7 @@ class AdminDashboard extends React.Component {
         if(a.createdAt > b.createdAt) {
           return -1;
         }
-        return 1;
+        return -1;
       }
     });
 
@@ -75,10 +76,12 @@ class AdminDashboard extends React.Component {
     let list = {};
     let storiesTitle = '';
     let logout = {};
+    let login = <LoginButton/>
 
-    if (User.loggedIn) {
-      message = `Welcome ${User.username}.`;
-      logout = <LogoutButton/>
+    if (Parse.User.current()) {
+      message = `Welcome`;
+      logout = <LogoutButton/>;
+      login = {};
       storiesTitle =`Submitted Stories`;
       list =
         this.state.stories.map(story => {
@@ -104,14 +107,14 @@ class AdminDashboard extends React.Component {
 
     return (
       <section className="dashboard">
-        <h2>Admin Dashboard</h2>
+        <h1>Admin Dashboard</h1>
         <p>{message}</p>
-        {logout}
           <h2>{storiesTitle}</h2>
           <div id="list">
             {list}
           </div>
-
+          {logout}
+          {login}
         <Link to="map" className="btn btn-primary">HOME</Link>
       </section>
     )

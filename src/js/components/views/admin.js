@@ -5,6 +5,7 @@ import User from '../../user';
 import Router, { RouteHandler, Link } from 'react-router';
 
 class Admin extends React.Component {
+
   onSubmit() {
     let self = this;
     let data = {
@@ -13,13 +14,13 @@ class Admin extends React.Component {
     }
 
     if (!(data.username && data.password)) {
-      alert('Please complete the login form.')
+      alert('You entered your login or password. Try again!')
       return;
     }
 
     Parse.User.logIn(data.username, data.password, {
       success: function(user) {
-        User.setData(user).login();
+        // User.setData(user).login();
         self.context.router.transitionTo('admindash');
       },
       error: function(user, error) {

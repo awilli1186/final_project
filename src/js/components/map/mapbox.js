@@ -33,7 +33,7 @@ let Mapbox = React.createClass({
   render: function() {
   let mapStyle = {
     width: '100%',
-    height: '80%'
+    height: '100%'
   };
 
   return (

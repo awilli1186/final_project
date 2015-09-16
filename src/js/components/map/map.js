@@ -52,9 +52,9 @@ let Map = React.createClass({
         let { title, name, date, address, media} = story;
         let marker = L.marker(new L.LatLng(latitude, longitude), {
           icon: L.mapbox.marker.icon({
-            'marker-symbol': 'marker-stroked',
+            'marker-symbol': 'star-stroked',
             'marker-size': 'large',
-            'marker-color': '2989c6'
+            'marker-color': '2C3E50'
           })
         });
 

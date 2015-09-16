@@ -6,6 +6,7 @@ import jQuery from 'jquery'
 import LogoutButton from '../views/logout';
 import LoginButton from '../views/loginbtn';
 import Router, { Link } from 'react-router';
+import moment from 'moment';
 
 class AdminDashboard extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class AdminDashboard extends React.Component {
         if(a.createdAt > b.createdAt) {
           return -1;
         }
-        return -1;
+        return 1;
       }
     });
 

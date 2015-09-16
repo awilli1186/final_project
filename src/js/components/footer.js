@@ -16,7 +16,7 @@ let Footer  = React.createClass ({
     return (
 
       <div className='footer'>
-          <Link to="/admin" >ADMIN</Link>
+          <Link id="admin" to="/admin" >ADMIN</Link>
       </div>
     )
   }

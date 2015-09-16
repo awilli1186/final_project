@@ -168,7 +168,7 @@ select {
     font-weight: 200;
     font-size: 18px;
     position: relative;
-    bottom: 1.5em;
+    bottom: .8em;
     left: 2em;
     cursor: pointer; }
     .top a:hover {
@@ -177,7 +177,7 @@ select {
       text-decoration: none; }
   .top .add {
     float: right;
-    bottom: 2.5em;
+    bottom: 2em;
     left: -2em;
     cursor: pointer; }
 
@@ -188,17 +188,17 @@ select {
   width: 100%;
   clear: both;
   background-color: #2C3E50; }
-  .footer a {
+  .footer #admin {
     margin-left: 47.68161%;
     position: relative;
     top: 22px;
     color: #eee; }
 
 .map {
-  margin: 0;
   width: 100%;
-  height: 800px;
-  position: relative; }
+  height: 700px;
+  position: relative;
+  margin-bottom: 60px; }
 
 .leaflet-popup-content {
   text-align: center;

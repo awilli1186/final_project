@@ -55,6 +55,7 @@ let StoryForm = React.createClass({
 
   submitStory() {
     StoryAction.addStory(fieldValues);
+    StoryAction.reset(fieldValues);
   },
 
   showStep() {

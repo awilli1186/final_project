@@ -1,12 +1,10 @@
 // Base Layout Styles
 
-$yellow : #F2E78F;
+//Colors
 $grey   : #EFEFEF;
-$orange : #fb6733;
 $red    : #d33847;
 $white  : #fff;
 $darkblue: #2C3E50;
-$blue  : #0672B5;
 
 // Helpers
 @mixin clear-fix {
@@ -44,6 +42,6 @@ a {
   &:hover {
     text-decoration: underline;
     transition: ease .2s;
-    color: $blue;
+    color: $darkblue;
   }
 }

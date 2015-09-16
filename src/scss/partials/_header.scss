@@ -1,23 +1,23 @@
 .top {
   position: relative;
   width: inherit;
-  height: 75px;
+  height: 100px;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $darkblue;
   background: $darkblue;
 
   .logo {
-    @include shift(3.5);
+    @include shift(3.8);
     position: relative;
     top:13px;
 }
     a {
       color: $white;
-      font-weight: bold;
+      font-weight: 200;
       font-size: 18px;
       position: relative;
-      bottom: .5em;
+      bottom: 1.5em;
       left: 2em;
       cursor: pointer;
       &:hover {
@@ -28,7 +28,7 @@
     }
     .add {
       float: right;
-      bottom: 1.7em;
+      bottom: 2.5em;
       left: -2em;
       cursor: pointer;
     }

@@ -17,7 +17,7 @@ let Header  = React.createClass ({
   render() {
     return (
       <div className='top'>
-        <Link className="logo" to="/map" ><img src={"./images/VON1.png"} alt='Voices of Nashville' /></Link>
+        <Link className="logo" to="/map" ><img src={"./images/VOICES_LOGO1.png"} alt='Voices of Nashville' /></Link>
         <nav>
           <AboutModal />
           <Trigger />

@@ -97,7 +97,7 @@
     .closeAbout {
       position: relative;
       background:none;
-      color: $yellow;
+      color: $red;
       left: 11.5em;
       padding: 5px;
       font-size: 18px;
@@ -111,8 +111,7 @@
 .loc-output {
   margin: 10px;
   font-size: 18px;
-  color: #F2AE72;
-  text-shadow: .5px 1px black;
+  color: $red;
 }
 
 .confirmation {

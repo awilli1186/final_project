@@ -16,21 +16,21 @@
   }
 
   &.btn-primary {
-    background-color: $blue;
-    border: 1px solid $blue;
+    background-color: $darkblue;
+    border: 1px solid $darkblue;
     margin-top: 1.5em;
     }
     &:hover {
     background-color: #eee;
     transition: ease .5s;
-    color: $blue;
+    color: $darkblue;
     text-decoration: none;
   }
   }
 
   #submit {
     &:hover {
-      background-color: $blue;
+      background-color: $darkblue;
       transition: none;
       color: $grey;
     }

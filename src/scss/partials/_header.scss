@@ -14,7 +14,7 @@
 
   .logo {
     @include media($mobile) {
-      margin-left: -3%;
+      margin-left: -5%;
     }
     @include shift(3.95);
     max-width:360px;
@@ -45,7 +45,7 @@
     }
     .add {
       @include media($mobile) {
-        bottom: 0.5em; 
+        bottom: 0.5em;
       }
       float: right;
       bottom: 2em;

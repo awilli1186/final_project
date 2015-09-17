@@ -160,13 +160,23 @@ select {
   border-bottom: 1px solid #2C3E50;
   background: #2C3E50;
   z-index: 15; }
+  @media screen and (max-width: 450px) {
+    .top {
+      height: 120px; } }
   .top:last-child {
     margin-right: 0; }
   .top .logo {
     margin-left: 33.69273%;
-    width: 100%;
+    max-width: 360px;
+    height: auto;
+    display: block;
     position: relative;
     top: 11px; }
+    @media screen and (max-width: 450px) {
+      .top .logo {
+        margin-left: -3%; } }
+    .top .logo img {
+      width: 100%; }
   .top a {
     color: #fff;
     font-weight: 200;
@@ -175,6 +185,9 @@ select {
     bottom: .8em;
     left: 2em;
     cursor: pointer; }
+    @media screen and (max-width: 450px) {
+      .top a {
+        bottom: -0.7em; } }
     .top a:hover {
       color: #D33A45;
       transition: ease 0.5s;
@@ -184,6 +197,9 @@ select {
     bottom: 2em;
     left: -2em;
     cursor: pointer; }
+    @media screen and (max-width: 450px) {
+      .top .add {
+        bottom: 0.5em; } }
 
 .footer {
   position: static;
@@ -240,6 +256,15 @@ select {
   width: 14.70196%;
   margin-left: 42.64902%;
   min-height: 750px; }
+  @media screen and (max-width: 450px) {
+    .login {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 73.14426%;
+      margin-left: 16.11345%; }
+      .login:last-child {
+        margin-right: 0; } }
   .login:last-child {
     margin-right: 0; }
   .login h2 {
@@ -249,6 +274,10 @@ select {
     margin-bottom: 15px; }
   .login input {
     margin-bottom: 10px; }
+    @media screen and (max-width: 450px) {
+      .login input {
+        width: 150px;
+        margin-left: 25%; } }
   .login button {
     margin-left: 33.69273%; }
   .login a {

@@ -1,4 +1,8 @@
 .login {
+  @include media($mobile) {
+    @include span-columns(3);
+    @include shift(.6);
+  }
   @include span-columns(2);
   @include shift(5);
   min-height: 750px;
@@ -9,6 +13,10 @@
     margin-bottom: 15px;
   }
   input {
+    @include media($mobile) {
+      width:150px;
+      margin-left: 25%;
+    }
     margin-bottom: 10px;
   }
   button {

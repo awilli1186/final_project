@@ -160,7 +160,7 @@ select {
   border-bottom: 1px solid #2C3E50;
   background: #2C3E50;
   z-index: 15; }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 525px) {
     .top {
       height: 120px; } }
   .top:last-child {
@@ -172,7 +172,7 @@ select {
     display: block;
     position: relative;
     top: 11px; }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 525px) {
       .top .logo {
         margin-left: -3%; } }
     .top .logo img {
@@ -185,7 +185,7 @@ select {
     bottom: .8em;
     left: 2em;
     cursor: pointer; }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 525px) {
       .top a {
         bottom: -0.7em; } }
     .top a:hover {
@@ -197,7 +197,7 @@ select {
     bottom: 2em;
     left: -2em;
     cursor: pointer; }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 525px) {
       .top .add {
         bottom: 0.5em; } }
 
@@ -256,7 +256,7 @@ select {
   width: 14.70196%;
   margin-left: 42.64902%;
   min-height: 750px; }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 525px) {
     .login {
       float: left;
       display: block;
@@ -274,7 +274,7 @@ select {
     margin-bottom: 15px; }
   .login input {
     margin-bottom: 10px; }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 525px) {
       .login input {
         width: 150px;
         margin-left: 25%; } }

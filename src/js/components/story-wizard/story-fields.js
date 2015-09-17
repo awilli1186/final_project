@@ -8,15 +8,15 @@ let StoryFields = React.createClass({
         <ul className="form-fields">
           <li>
             <label>Title</label>
-            <input type="text" ref="title" defaultValue={this.props.fieldValues.title} />
+            <input type="text" ref="title" placeholder='title' defaultValue={this.props.fieldValues.title} />
           </li>
           <li>
             <label>Story</label>
-            <textarea type="text" ref="story" defaultValue={this.props.fieldValues.story} />
+            <textarea type="text" ref="story" placeholder='Story Discription' defaultValue={this.props.fieldValues.story} />
           </li>
           <li>
             <label>Submitter Name</label>
-            <input type="text" ref="name" defaultValue={this.props.fieldValues.name} />
+            <input type="text" ref="name" placeholder='First and Last Name'defaultValue={this.props.fieldValues.name} />
           </li>
           <li>
             <label>Historic Date</label>

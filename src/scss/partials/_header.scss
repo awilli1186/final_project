@@ -1,16 +1,19 @@
 .top {
+  @include span-columns(12);
   position: relative;
-  width: inherit;
+  width: 100%;
   height: 100px;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $darkblue;
   background: $darkblue;
+  z-index: 15;
 
   .logo {
-    @include shift(3.8);
+    @include shift(3.95);
+    width:100%;
     position: relative;
-    top:13px;
+    top:11px;
 }
     a {
       color: $white;
@@ -21,7 +24,7 @@
       left: 2em;
       cursor: pointer;
       &:hover {
-        color: $white;
+        color: $red;
         transition: ease .5s;
         text-decoration: none;
       }

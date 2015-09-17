@@ -42,7 +42,7 @@
 
   #list {
     @include span-columns(7);
-    @include shift(2.45);
+    @include shift(2.52);
     background-color: $grey;
     position: relative;
     padding: 15px;
@@ -50,7 +50,7 @@
     li {
       @include span-columns(6 of 6);
       position: relative;
-      text-align: justify;
+      text-align: center;
       background: $white;
       border-bottom: 1px solid $grey;
       margin-bottom: 5px;
@@ -59,16 +59,20 @@
     p {
       font-size: 14px;
       color: black;
-      text-align: justify;
+      text-align: center;
     }
     .story {
       overflow-wrap: break-word;
     }
     img {
       width: 150px;
-      position: absolute;
-      left: 39em;
-      bottom: 5.4em;
+      position: relative;
+      padding-top: 5px;
+      }
+    button {
+      position: relative;
+      left: 1em;
+      bottom: 1em;
       }
     }
   }

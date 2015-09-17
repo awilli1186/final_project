@@ -1,8 +1,6 @@
 import React from 'react';
-
 import Parse from '../../parse';
-import User from '../../user';
-import Router, { RouteHandler, Link } from 'react-router';
+import Router, { Link } from 'react-router';
 
 class Admin extends React.Component {
 
@@ -14,7 +12,7 @@ class Admin extends React.Component {
     }
 
     if (!(data.username && data.password)) {
-      alert('You entered your login or password. Try again!')
+      alert('You entered your login or password wrong. Try again!')
       return;
     }
 

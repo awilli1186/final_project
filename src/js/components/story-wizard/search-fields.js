@@ -12,6 +12,7 @@ let SearchFields = React.createClass({
     }
   },
 
+
   onLocationSearch() {
     let self = this;
     let location = encodeURIComponent(React.findDOMNode(this.refs.location).value);
@@ -51,6 +52,7 @@ let SearchFields = React.createClass({
         <input
           type="text"
           ref="location"
+          placeholder="Enter An Address"
           defaultValue={this.props.fieldValues.location}
           onChange={_.debounce(this.onLocationSearch, 250)}
         />

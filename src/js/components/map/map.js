@@ -28,6 +28,7 @@ let Map = React.createClass({
   render: function() {
     return (
       <div className="map">
+        <p>Share your story...</p>
         <Mapbox
           ref="map"
           mapId="awilli1186.nbobioh0"

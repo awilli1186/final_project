@@ -1,6 +1,6 @@
 .login {
   @include span-columns(2);
-  @include shift(4.9);
+  @include shift(5);
   min-height: 750px;
   h2 {
     margin-top: 1em;
@@ -12,7 +12,7 @@
     margin-bottom: 10px;
   }
   button {
-    @include shift(3.8);
+    @include shift(3.95);
   }
   a {
     position: relative;

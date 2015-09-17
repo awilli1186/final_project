@@ -1,12 +1,10 @@
-import React, { PropTypes } from 'react'
-import User from '../../user';
+import React from 'react'
 import {Parse} from 'parse';
 import $ from 'jquery';
 import jQuery from 'jquery'
 import LogoutButton from '../views/logout';
 import LoginButton from '../views/loginbtn';
 import Router, { Link } from 'react-router';
-import moment from 'moment';
 
 class AdminDashboard extends React.Component {
   constructor(props) {

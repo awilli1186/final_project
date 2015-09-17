@@ -10,14 +10,6 @@ import assign from 'object-assign';
 import StoryAction from '../../actions/story';
 import StoriesStore from '../../stores/stories';
 
-let fieldValues = {
-  location   : null,
-  title      : '',
-  story      : '',
-  name       : '',
-  date       : '',
-  media      : null
-}
 
 let StoryForm = React.createClass({
 
@@ -31,14 +23,18 @@ let StoryForm = React.createClass({
 
   getInitialState() {
     return {
-      step : 1
+      step : 1,
+      location   : null,
+      title      : '',
+      story      : '',
+      name       : '',
+      date       : '',
+      media      : null
     }
   },
 
   saveValues(field_value) {
-    return function() {
-      fieldValues = assign({}, fieldValues, field_value)
-    }.bind(this)()
+    this.state = assign({}, this.state, field_value);
   },
 
   nextStep() {
@@ -54,28 +50,28 @@ let StoryForm = React.createClass({
   },
 
   submitStory() {
-    StoryAction.addStory(fieldValues);
+    StoryAction.addStory(this.state);
   },
 
   showStep() {
     switch (this.state.step) {
       case 1:
-        return <SearchFields  fieldValues={fieldValues}
+        return <SearchFields  fieldValues={this.state}
                               nextStep={this.nextStep}
                               saveValues={this.saveValues} />
       case 2:
-        return <StoryFields  fieldValues={fieldValues}
+        return <StoryFields  fieldValues={this.state}
                              nextStep={this.nextStep}
                              previousStep={this.previousStep}
                              saveValues={this.saveValues} />
       case 3:
-        return <MediaFields  fieldValues={fieldValues}
+        return <MediaFields  fieldValues={this.state}
                              nextStep={this.nextStep}
                              previousStep={this.previousStep}
                              saveValues={this.saveValues} />
 
       case 4:
-        return <Confirmation fieldValues={fieldValues}
+        return <Confirmation fieldValues={this.state}
                              previousStep={this.previousStep}
                              submitStory={this.submitStory}
                              />

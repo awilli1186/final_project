@@ -1,6 +1,6 @@
 #Voices of Nashville
 
-- Voices of Nashville is a public interactive web app that tells the history of Nashville through personal stories. Using mapbox maps users can pin a story to a location within davidson county. The story includes an image with a written out description.
+- Voices of Nashville is a public interactive web app that tells the history of Nashville through personal stories. Using mapbox maps users can pin a story to a location within davidson county. The story includes an image with a written description.
 
 Check it out here: http://awilli1186.github.io/voices_of_nashville/#/
 

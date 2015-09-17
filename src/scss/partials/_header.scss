@@ -14,7 +14,7 @@
 
   .logo {
     @include media($mobile) {
-      margin-left: -5%;
+      margin-left: 3%;
     }
     @include shift(3.95);
     max-width:360px;
@@ -23,12 +23,15 @@
     position: relative;
     top:11px;
     img {
+      @include media($mobile) {
+        width: 75%;
+      }
       width:100%;
     }
 }
     a {
       @include media($mobile) {
-        bottom: -0.7em;
+        bottom: -1.3em;
       }
       color: $white;
       font-weight: 200;
@@ -45,7 +48,7 @@
     }
     .add {
       @include media($mobile) {
-        bottom: 0.5em;
+        bottom: 0em;
       }
       float: right;
       bottom: 2em;

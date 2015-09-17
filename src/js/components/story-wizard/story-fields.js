@@ -8,7 +8,7 @@ let StoryFields = React.createClass({
         <ul className="form-fields">
           <li>
             <label>Title</label>
-            <input type="text" ref="title" placeholder='title' defaultValue={this.props.fieldValues.title} />
+            <input type="text" ref="title" placeholder='Title' defaultValue={this.props.fieldValues.title} />
           </li>
           <li>
             <label>Story</label>

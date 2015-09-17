@@ -174,9 +174,12 @@ select {
     top: 11px; }
     @media screen and (max-width: 550px) {
       .top .logo {
-        margin-left: -5%; } }
+        margin-left: 3%; } }
     .top .logo img {
       width: 100%; }
+      @media screen and (max-width: 550px) {
+        .top .logo img {
+          width: 75%; } }
   .top a {
     color: #fff;
     font-weight: 200;
@@ -187,7 +190,7 @@ select {
     cursor: pointer; }
     @media screen and (max-width: 550px) {
       .top a {
-        bottom: -0.7em; } }
+        bottom: -1.3em; } }
     .top a:hover {
       color: #D33A45;
       transition: ease 0.5s;
@@ -199,7 +202,7 @@ select {
     cursor: pointer; }
     @media screen and (max-width: 550px) {
       .top .add {
-        bottom: 0.5em; } }
+        bottom: 0em; } }
 
 .footer {
   position: static;

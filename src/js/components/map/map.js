@@ -35,7 +35,7 @@ let Map = React.createClass({
           zoomControl={true}
           scrollWheelZoom={false}
           center={[36.161589,-86.7739455]}
-          zoom={11}
+          zoom={12}
           onMapCreated={this.onMapCreated}
           />
       </div>

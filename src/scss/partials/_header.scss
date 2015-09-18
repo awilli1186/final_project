@@ -16,12 +16,13 @@
     @include media($mobile) {
       margin-left: 3%;
     }
-    @include shift(3.95);
+    margin: auto;
     max-width:360px;
     height: auto;
     display: block;
     position: relative;
     top:11px;
+    left: -.2em;
     img {
       @include media($mobile) {
         width: 75%;

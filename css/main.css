@@ -166,12 +166,13 @@ select {
   .top:last-child {
     margin-right: 0; }
   .top .logo {
-    margin-left: 33.69273%;
+    margin: auto;
     max-width: 360px;
     height: auto;
     display: block;
     position: relative;
-    top: 11px; }
+    top: 11px;
+    left: -.2em; }
     @media screen and (max-width: 550px) {
       .top .logo {
         margin-left: 3%; } }

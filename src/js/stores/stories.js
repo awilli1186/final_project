@@ -52,5 +52,5 @@ AppDispatcher.register((payload) => {
             break;
         default:
             break;
-    }
+  }
 });

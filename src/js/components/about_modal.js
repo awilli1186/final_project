@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'boron/FadeModal';
+import Modal from 'boron/FlyModal';
 import About from './views/about';
 
 var AboutModal = React.createClass({

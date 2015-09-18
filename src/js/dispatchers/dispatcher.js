@@ -12,8 +12,8 @@ class AppDispatcher extends Dispatcher {
         this.dispatch({
             source: 'SERVER_ACTION',
             action: action
-        });
-    }
+    });
+  }
 }
 
 let _AppDispatcher = new AppDispatcher();
